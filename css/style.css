@@ -353,6 +353,7 @@ a:hover {
   font-family: "icomoon";
 }
 .site-navbar .site-navigation .site-menu .has-children .dropdown {
+  width: 350px;
   visibility: hidden;
   opacity: 0;
   top: 100%;
@@ -1535,6 +1536,7 @@ a:hover {
   border-color: #fff;
   color: #fff;
   border-width: 2px;
+  width: 150px;
   text-transform: uppercase;
   font-size: 11px;
   letter-spacing: 0.1em;
