@@ -518,26 +518,6 @@ mark,
   height: auto;
 }
 
-.img-profile {
-  -webkit-filter: none;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  max-width: 80%;
-  height: auto;
-}
-
-.img-about {
-  -webkit-filter: none;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  height: 600px;
-  width: auto;
-}
-
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
@@ -7955,6 +7935,15 @@ button.bg-dark:focus {
   width: 25% !important;
 }
 
+.w-40 {
+  width: 40% !important;
+}
+
+
+.w-45 {
+  width: 46% !important;
+}
+
 .w-50 {
   width: 50% !important;
 }
@@ -7962,6 +7951,11 @@ button.bg-dark:focus {
 .w-75 {
   width: 75% !important;
 }
+
+.w-80 {
+  width: 80% !important;
+}
+
 
 .w-100 {
   width: 100% !important;
