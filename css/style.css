@@ -30,6 +30,10 @@ a:hover {
   color: #000 !important;
 }
 
+.text-white {
+  color: #fff !important;
+}
+
 .bg-black {
   background: #000 !important;
 }
@@ -1715,7 +1719,7 @@ img:hover {
   padding: 100px 15px;
 }
 .timeline-containers {
-  max-width: 1100px;
+  max-width: 55vw;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
@@ -1765,30 +1769,31 @@ img:hover {
   border-radius: 5px;
   z-index: 1;
 }
-.timeline-content h5 {
-  font-size: 20px;
-  color: #c8c8c8;
-  margin: 0 0 10px;
-  text-transform: capitalize;
-  font-weight: 500;
-}
 
 .timeline-content h5 {
-  font-size: 15px;
+  font-size: 1vw;
   color: #ffffff;
   font-weight: 300;
   line-height: 22px;
+  margin-bottom: 0.1vw;
+}
+
+.timeline-content h6 {
+  font-size: 0.8vw;
+  margin-bottom: 0.1vw;
+  font-weight: 300;
 }
 
 .timeline-content p {
   color: #ffffff;
-  font-size: 18px;
-  font-weight: 300;
+  font-size: 0.8vw;
+  font-weight: 500;
   line-height: 22px;
+  margin-bottom: 0;
 }
 
 .timeline-content i {
-  font-size: 35px;
+  font-size: 2vw;
 }
 
 /* readme */
@@ -1797,6 +1802,12 @@ img:hover {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.readme-container summary {
+  font-size: 1.5vw;
+  font-weight: 500;
+  margin-bottom: 1vw;
 }
 
 .readme-border {
@@ -1808,7 +1819,7 @@ img:hover {
 }
 
 .readme-border i {
-  font-size: 25px;
+  font-size: 1.5vw;
   margin-right: 1rem;
 }
 
@@ -1817,12 +1828,73 @@ img:hover {
   border: 1px solid #fff;
 }
 
+.readme-border details {
+  align-content: center;
+}
+
 .readme-border a {
-  color: #fff;
+  color: #343a40;
 }
 
 .readme-border a:hover {
-  color: #737373;
+  color: #fff;
+}
+
+.readme-border a p {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+@keyframes balloonAnimation {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.readme-container.balloon {
+  animation: balloonAnimation 0.7s ease-out forwards;
+}
+
+@keyframes balloonAnimationReverse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    opacity: 0;
+  }
+}
+
+.readme-container.balloon-reverse {
+  animation: balloonAnimationReverse 0.5s ease-out forwards;
+}
+
+@keyframes slideOutRight {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.slide-out-right {
+  animation: slideOutRight 0.5s forwards;
 }
 
 .toolbar {

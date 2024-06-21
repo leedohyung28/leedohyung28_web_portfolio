@@ -1,37 +1,65 @@
 const koreatechour = document.createElement("div");
-koreatechour.style = "margin-top: 1600px;";
+koreatechour.classList.add("w-100");
+koreatechour.style = "margin-top: 1400px;";
 koreatechour.innerHTML = `
 <div class="toolbar">
 <i class="fa-solid fa-circle ml-2 btn-close" style="color: #FF0000;"></i>
 <i class="fa-solid fa-circle ml-2 btn-min" style="color: #FF4000;"></i>
 <i class="fa-solid fa-circle ml-2 btn-max" style="color: #04B404;"></i></div>
 <div class="readme-border content-project">
-    <h2 class="text-center">KOREATECHOUR</h2> 
-    <h2 class="text-center">팀 프로젝트</h2>
+    <h5 class="text-center">KOREATECHOUR</h5> 
+    <h5 class="text-center">팀 프로젝트</h5>
+    <p class="text-center">졸업 학점/요건 계산 프로그램</p>
 
     <hr style="border: 1px solid white; width: 100%;">
-    <h5 class="mt-3">개발 간트 차트</h5>
-    <div class="text-center"><img class="w-100" src="https://private-user-images.githubusercontent.com/91038179/289570558-35d02e12-40ad-43dc-922b-f4cb6e69d3ad.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTg2MTcxMDksIm5iZiI6MTcxODYxNjgwOSwicGF0aCI6Ii85MTAzODE3OS8yODk1NzA1NTgtMzVkMDJlMTItNDBhZC00M2RjLTkyMmItZjRjYjZlNjlkM2FkLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA2MTclMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNjE3VDA5MzMyOVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTkwY2Q5MjBiYmNiM2FjMTkzZTdlMzhkYzU0ZjUwZjBiYmU5NTI1MmRjNWI2MWVhNzFkNTY2Y2U2ZGViMTVjYmEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0._GwV96gUTyUtK5NWbGpv1lEPVlJjU7pTxlvQvAc672U"/></div>
-
-    <hr style="border: 1px solid white; width: 100%;">
-    <h5 class="mt-3" >사용 언어/환경</h5>
-    <div class="form-row ml-3"><h4>BE/FE : </h4><i class="devicon-csharp-plain"></i><h4>C#</h4></div>
-    <div class="form-row ml-3"><h4>FrontEnd : </h4><i class="devicon-nuget-original"></i><h4>Nuget</h4></div>
-    <div class="form-row ml-3"><h4>Database : </h4><i class="devicon-mysql-plain-wordmark"></i><h4>MySQL</h4></div>
-
-    <hr style="border: 1px solid white; width: 100%;">
-    <h5 class="mt-3" >프로젝트 설계 목적</h5>
-    <p>학생들의 시간표 설계 및 편리한 졸업 학점 계산</p>
-    <p>시간표 설계는 학생들이 기존에 이용하는 <a href="https://hanpyo.com/">'한표'</a> 참고</p>
-    <p>학부 및 학년에 따른 다른 졸업 학점 계산 기능</p>
-
-    <hr style="border: 1px solid white; width: 100%;">
-    <h5 class="mt-3" >참고 자료</h5>
+    <a href="https://github.com/leedohyung28/BestWebProgramming/releases/tag/koreatechour"><p>KOREATECHOUR Release File</p></a>
     <a href="https://docs.google.com/presentation/d/1MO7cMex_dfrHO-jVGk0_3T0wfxXYI5CP/edit?usp=sharing&ouid=111824440384685428415&rtpof=true&sd=true"><p>Project Presentation File</p></a>
     <a href="https://github.com/leedohyung28/BestWebProgramming"><p>GitHub Readme</p></a>
 
     <hr style="border: 1px solid white; width: 100%;">
-    <h5 class="mt-3" >연결 링크</h5>
-    <a href="https://github.com/leedohyung28/BestWebProgramming/releases/tag/koreatechour"><p>KOREATECHOUR Release File</p></a>
+    <details>
+    <summary>개발 차트</summary>
+    <div class="text-center"><img class="w-100" src="./images/readme/koreatechour_schedule.png"/></div>
+    </details>
+
+    <hr style="border: 1px solid white; width: 100%;">
+    <details>
+    <summary>프로젝트 설계 목적</summary>
+    <p>학생들의 시간표 설계 및 편리한 졸업 학점 계산</p>
+    <p>시간표 설계는 학생들이 기존에 이용하는 <a href="https://hanpyo.com/">'한표'</a> 참고</p>
+    <p>학부 및 학년에 따른 다른 졸업 학점 계산 기능</p>
+    </details>
+
+    <hr style="border: 1px solid white; width: 100%;">
+    <details>
+    <summary>사용 언어/환경</summary>
+    <div class="form-row ml-3"><i class="devicon-csharp-plain"></i><h6>C#</h6></div>
+    <div class="form-row ml-3"><i class="devicon-nuget-original"></i><h6>Nuget</h6></div>
+    <div class="form-row ml-3"><i class="devicon-mysql-plain-wordmark"></i><h6>MySQL</h6></div>
+    </details>
+
+    <hr style="border: 1px solid white; width: 100%;">
+    <details>
+    <summary>업무 및 역할</summary>
+    <p>학생들의 시간표 설계 및 편리한 졸업 학점 계산</p>
+    <p>시간표 설계는 학생들이 기존에 이용하는 <a href="https://hanpyo.com/">'한표'</a> 참고</p>
+    <p>학부 및 학년에 따른 다른 졸업 학점 계산 기능</p>
+    </details>
+
+    <hr style="border: 1px solid white; width: 100%;">
+    <details>
+    <summary>어려웠던 점과 해결책</summary>
+    <p class="mb-0">학번/학과에 따른 학부 세부 학과 변화 및</p>
+    <p class="mt-0">→ 조건문을 통해 다르게 표시되도록 분기 설계 및 구현</p>
+    <p class="mb-0">Visual Studio 버전에 따른 NuGet 설치 가능 여부 및 이에 따라 UI가 바뀌는 문제</p>
+    <p class="mt-0">→ 버전과 설치 방법을 GitHub 및 Release에 명시하였습니다.</p>
+    </details>
+
+    <hr style="border: 1px solid white; width: 100%;">
+    <details>
+    <summary>배운점</summary>
+    <p>C#에는 BE/FE 설계에 제약이 있지만, NuGet 패키지를 통해 더욱 많은 부분을 구현할 수 있다는 것을 알았습니다.</p>
+    <p>조장 역할을 하면서 일정을 세우고 분업 지시를 하며 유연하게 팀을 이끄는 방법에 대해 배웠습니다.</p>
+    </details>
 </div>
 `;
