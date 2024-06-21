@@ -66,7 +66,8 @@ document.addEventListener("DOMContentLoaded", () => {
           index,
           readmeMarginTop,
           rightReadmeContainers,
-          profileContainer
+          profileContainer,
+          "right"
         );
       } else {
         readmeContainer.classList.add("readme-left");
@@ -102,42 +103,9 @@ document.addEventListener("DOMContentLoaded", () => {
           index,
           readmeMarginTop,
           leftReadmeContainers,
-          profileContainer
+          profileContainer,
+          "left"
         );
-
-        const btnMin = readmeContainer.querySelector(".btn-min");
-        if (btnMin) {
-          btnMin.addEventListener("click", () => {
-            readmeContainer.classList.remove("balloon");
-            readmeContainer.classList.add("slide-out-left");
-
-            // 애니메이션이 끝난 후 요소 제거
-            readmeContainer.addEventListener(
-              "animationend",
-              () => {
-                readmeContainer.style.display = "none"; // 요소를 숨깁니다.
-                const readmeTitle =
-                  readmeContainer.querySelector("#readmeTitle");
-                const titleText = readmeTitle
-                  ? readmeTitle.textContent
-                  : "Restored Container";
-
-                leftArrowContainer.classList.add("visible");
-                leftArrowContainer.style.marginTop = readmeMarginTop;
-                leftArrowContainer.innerHTML = `<span>&#9664;</span> ${titleText}`; // 화살표 추가
-              },
-              { once: true }
-            );
-          });
-        }
-
-        leftArrowContainer.addEventListener("click", () => {
-          readmeContainer.style.display = "block"; // 요소를 다시 보이게 합니다.
-          readmeContainer.classList.remove("slide-out-right");
-          readmeContainer.classList.add("balloon"); // 원래 상태로 복원
-          leftArrowContainer.classList.remove("visible");
-          leftArrowContainer.innerHTML = ""; // 화살표와 텍스트 제거
-        });
       }
     });
   });
@@ -168,13 +136,18 @@ function initializeMinimizeButton(
   index,
   readmeMarginTop,
   readmeContainers,
-  profileContainer
+  profileContainer,
+  leftOrRight
 ) {
   const btnMin = readmeContainer.querySelector(".btn-min");
   if (btnMin) {
     btnMin.addEventListener("click", () => {
       readmeContainer.classList.remove("balloon");
+      if (leftOrRight == "right") {
       readmeContainer.classList.add("slide-out-right");
+      } else {
+        readmeContainer.classList.add("slide-out-left");
+      }
 
       readmeContainer.addEventListener(
         "animationend",
@@ -189,47 +162,80 @@ function initializeMinimizeButton(
             arrowContainer.classList.add("visible");
           }
 
-          arrowContainer.innerHTML += `<p id="arrow-${index}" style="position:absolute; right:0; margin-top:${readmeMarginTop};">${titleText} <span>&#9654;</span></p>`;
-          arrowContainer.addEventListener("click", (event) => {
-            const clickedElement = event.target.closest("p");
-            if (clickedElement && clickedElement.id.startsWith("arrow-")) {
-              const arrowIndex = parseInt(clickedElement.id.split("-")[1]);
-              clickedElement.remove();
+          if (leftOrRight == "right") {
+            arrowContainer.innerHTML += `<p id="arrow-${index}" style="position:absolute; right:0; margin-top:${readmeMarginTop};">${titleText} <span>&#9654;</span></p>`;
+          }
+          else {
+            arrowContainer.innerHTML += `<p id="arrow-${index}" style="position:absolute; margin-top:${readmeMarginTop};"><span>&#9664;</span> ${titleText}</p>`;
+          }
 
-              const newReadmeContainer = document.createElement("div");
-              newReadmeContainer.classList.add(
-                "readme-container",
-                "col-3",
-                "readme-right",
-                "balloon"
-              );
-              if (arrowIndex) {
-                newReadmeContainer.appendChild(readmeContainers[arrowIndex]);
+          if (!arrowContainer.dataset.listenerAdded) {
+            arrowContainer.addEventListener("click", (event) => {
+              const clickedElement = event.target.closest("p");
+              if (clickedElement && clickedElement.id.startsWith("arrow-")) {
+                const arrowIndex = parseInt(clickedElement.id.split("-")[1]);
+                clickedElement.remove();
+
+                const newReadmeContainer = document.createElement("div");
+
+                if (leftOrRight === "right") {
+                  newReadmeContainer.classList.add(
+                    "readme-container",
+                    "col-3",
+                    "readme-right",
+                    "balloon"
+                  );
+                } else {
+                  newReadmeContainer.classList.add(
+                    "readme-container",
+                    "col-3",
+                    "readme-left",
+                    "balloon"
+                  );
+                }
+
+                if (arrowIndex) {
+                  newReadmeContainer.appendChild(readmeContainers[arrowIndex]);
+                }
+                if (leftOrRight === "right") {
+                  profileContainer.insertAdjacentElement(
+                    "afterend",
+                    newReadmeContainer
+                  );
+                } else {
+                  profileContainer.insertAdjacentElement(
+                    "beforebegin",
+                    newReadmeContainer
+                  );
+                }
+
+                initializeCloseButton(newReadmeContainer);
+                initializeMinimizeButton(
+                  newReadmeContainer,
+                  arrowContainer,
+                  index,
+                  readmeMarginTop,
+                  readmeContainers,
+                  profileContainer,
+                  leftOrRight
+                );
               }
-              profileContainer.insertAdjacentElement(
-                "afterend",
-                newReadmeContainer
-              );
 
-              initializeCloseButton(newReadmeContainer);
-              initializeMinimizeButton(
-                newReadmeContainer,
-                arrowContainer,
-                index,
-                readmeMarginTop,
-                readmeContainers,
-                profileContainer
-              );
-            }
+              if (leftOrRight === "right") {
+                readmeContainer.classList.remove("slide-out-right");
+              } else {
+                readmeContainer.classList.remove("slide-out-left");
+              }
 
-            readmeContainer.style.display = "block";
-            readmeContainer.classList.remove("slide-out-right");
-            readmeContainer.classList.add("balloon");
+              readmeContainer.classList.add("balloon");
 
-            if (rightArrowContainer.innerHTML.trim() === "") {
-              rightArrowContainer.classList.remove("visible");
-            }
-          });
+              if (arrowContainer.innerHTML.trim() === "") {
+                arrowContainer.classList.remove("visible");
+              }
+            });
+
+            arrowContainer.dataset.listenerAdded = "true";
+          }
         },
         { once: true }
       );
