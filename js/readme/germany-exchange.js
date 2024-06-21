@@ -7,7 +7,7 @@ exchangeGermany.innerHTML = `
 <i class="fa-solid fa-circle ml-2 btn-min" style="color: #FF4000;"></i>
 <i class="fa-solid fa-circle ml-2 btn-max" style="color: #04B404;"></i></div>
 <div class="readme-border content-extracurri">
-<h5 class="text-center">독일 교환학생</h5>
+<h5 id="readmeTitle" class="text-center">독일 교환학생</h5>
 <p class="text-center">알렌대학교 (Hochschule Aalen)</p> 
 
 <hr style="border: 1px solid white; width: 100%;">

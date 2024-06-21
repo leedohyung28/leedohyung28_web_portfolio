@@ -1,5 +1,5 @@
 const anythink = document.createElement("div");
-anythink.classList.add("w-100")
+anythink.classList.add("w-100");
 anythink.style = "margin-top: 1200px;";
 anythink.innerHTML = `
 <div class="toolbar">
@@ -7,7 +7,7 @@ anythink.innerHTML = `
 <i class="fa-solid fa-circle ml-2 btn-min" style="color: #FF4000;"></i>
 <i class="fa-solid fa-circle ml-2 btn-max" style="color: #04B404;"></i></div>
 <div class="readme-border content-extracurri">
-<h5 class="text-center">스타트업 Anythink 참여</h5>
+<h5 id="readmeTitle" class="text-center">스타트업 Anythink 참여</h5>
 <p class="text-center mb-0">헬스케어 애플리케이션 (BeSports)</p>
 <p class="text-center mt-0">및 관련 하드웨어 기기 판매</p>
 

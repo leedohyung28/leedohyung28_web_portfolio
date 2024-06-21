@@ -7,7 +7,7 @@ roadAnalysis.innerHTML = `
 <i class="fa-solid fa-circle ml-2 btn-min" style="color: #FF4000;"></i>
 <i class="fa-solid fa-circle ml-2 btn-max" style="color: #04B404;"></i></div>
 <div class="readme-border content-project">
-    <h5 class="text-center">도로 상태 분석 시스템</h5> 
+    <h5 id="readmeTitle" class="text-center">도로 상태 분석 시스템</h5> 
     <h5 class="text-center">졸업 프로젝트</h5>
     <p class="text-center mb-0">디바이스 (Jetson Nano)를 이용하여</p>
     <p class="text-center mt-0">도로의 위험 물질 (포트홀, 동물 등)을 탐지</p>

@@ -7,7 +7,7 @@ bcsdMobile.innerHTML = `
 <i class="fa-solid fa-circle ml-2 btn-min" style="color: #FF4000;"></i>
 <i class="fa-solid fa-circle ml-2 btn-max" style="color: #04B404;"></i></div>
 <div class="readme-border content-study">
-<h5 class="text-center">BCSD 모바일 스터디</h5> 
+<h5 id="readmeTitle" class="text-center">BCSD 모바일 스터디</h5> 
 <p class="text-center">교내 프로그래밍 동아리 참여</p>
 
 <hr style="border: 1px solid white; width: 100%;">

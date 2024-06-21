@@ -7,7 +7,7 @@ webFullstack.innerHTML = `
 <i class="fa-solid fa-circle ml-2 btn-min" style="color: #FF4000;"></i>
 <i class="fa-solid fa-circle ml-2 btn-max" style="color: #04B404;"></i></div>
 <div class="readme-border content-study">
-<h5 class="text-center">웹 풀스택</h5>
+<h5 id="readmeTitle" class="text-center">웹 풀스택</h5>
 <h5 class="text-center">프로그래머스 데브코스</h5>
 <p class="text-center">교육기관 : (주) 그렙</p>
 

@@ -1845,6 +1845,21 @@ img:hover {
   font-weight: bold;
 }
 
+/* toolbar */
+.toolbar {
+  height: 50px;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background-color: rgba(189, 189, 189, 0.7);
+  align-content: center;
+}
+
+.toolbar i:hover {
+  transform: scale(1.15);
+}
+
+/* animation */
 @keyframes balloonAnimation {
   0% {
     transform: scale(0);
@@ -1897,15 +1912,31 @@ img:hover {
   animation: slideOutRight 0.5s forwards;
 }
 
-.toolbar {
-  height: 50px;
-  width: 100%;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background-color: rgba(189, 189, 189, 0.7);
-  align-content: center;
+@keyframes slideOutLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
 }
 
-.toolbar i:hover {
-  transform: scale(1.15);
+.slide-out-left {
+  animation: slideOutLeft 0.5s forwards;
+}
+
+/* arrow */
+.right-arrow {
+  display: none; /* 처음에는 숨김 */
+  cursor: pointer;
+  color: white;
+  background: black;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.right-arrow.visible {
+  display: block; /* 보이도록 설정 */
 }

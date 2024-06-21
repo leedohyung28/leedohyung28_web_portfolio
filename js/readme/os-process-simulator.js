@@ -7,7 +7,7 @@ osSimulator.innerHTML = `
 <i class="fa-solid fa-circle ml-2 btn-min" style="color: #FF4000;"></i>
 <i class="fa-solid fa-circle ml-2 btn-max" style="color: #04B404;"></i></div>
 <div class="readme-border content-project">
-    <h5 class="text-center">운영체제 시뮬레이터</h5> 
+    <h5 id="readmeTitle" class="text-center">운영체제 시뮬레이터</h5> 
     <h5 class="text-center">팀 프로젝트</h5>
     <p class="text-center mb-0">6개의 스케줄링 알고리즘을</p>
     <p class="text-center mt-0">멀티코어로 동작시키는 프로그램</p>

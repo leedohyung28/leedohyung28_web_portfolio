@@ -7,7 +7,7 @@ instaGenerator.innerHTML = `
 <i class="fa-solid fa-circle ml-2 btn-min" style="color: #FF4000;"></i>
 <i class="fa-solid fa-circle ml-2 btn-max" style="color: #04B404;"></i></div>
 <div class="readme-border content-project">
-    <h5 class="text-center">인스타그램 이름 생성기</h5>
+    <h5 id="readmeTitle" class="text-center">인스타그램 이름 생성기</h5>
     <img class="w-100" src="./images/readme/ig_eng.jpg"> 
     <p class="text-center mt-1 mb-0">인스타그램 가입자를 위한</p>
     <p class="text-center mt-0">사용자 닉네임 추천/제작 사이트</p>

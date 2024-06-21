@@ -16,8 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
       nonContents = [0, 1, 2];
       rightContents = [3, 5, 8, 11, 16];
 
-      if (nonContents.includes(index)){}
-      else if (rightContents.includes(index)) {
+      if (nonContents.includes(index)) {
+      } else if (rightContents.includes(index)) {
         readmeContainer.classList.add("readme-right");
         // readmeContainer.textContent = index;
         profileContainer.insertAdjacentElement("afterend", readmeContainer);
@@ -32,6 +32,39 @@ document.addEventListener("DOMContentLoaded", () => {
           readmeContainer.appendChild(roadAnalysis);
         }
         readmeContainer.classList.add("balloon");
+
+        const restoreContainer = document.getElementById("restoreContainer");
+        const btnMin = readmeContainer.querySelector(".btn-min");
+        if (btnMin) {
+          btnMin.addEventListener("click", () => {
+            readmeContainer.classList.remove("balloon");
+            readmeContainer.classList.add("slide-out-right");
+
+            // 애니메이션이 끝난 후 요소 제거
+            readmeContainer.addEventListener(
+              "animationend",
+              () => {
+                readmeContainer.style.display = "none"; // 요소를 숨깁니다.
+                const readmeTitle =
+                  readmeContainer.querySelector("#readmeTitle");
+                const titleText = readmeTitle
+                  ? readmeTitle.textContent
+                  : "Restored Container";
+
+                restoreContainer.classList.add("visible");
+                restoreContainer.innerHTML = `${titleText} <span>&#9654;</span>`; // 화살표 추가
+              },
+              { once: true }
+            );
+          });
+        }
+        restoreContainer.addEventListener("click", () => {
+          readmeContainer.style.display = "block"; // 요소를 다시 보이게 합니다.
+          readmeContainer.classList.remove("slide-out-right");
+          readmeContainer.classList.add("balloon"); // 원래 상태로 복원
+          restoreContainer.classList.remove("visible");
+          restoreContainer.innerHTML = ""; // 화살표와 텍스트 제거
+        });
       } else {
         readmeContainer.classList.add("readme-left");
         // readmeContainer.textContent = index;
@@ -57,6 +90,23 @@ document.addEventListener("DOMContentLoaded", () => {
           readmeContainer.appendChild(webFullstack);
         }
         readmeContainer.classList.add("balloon");
+
+        const btnMin = readmeContainer.querySelector(".btn-min");
+        if (btnMin) {
+          btnMin.addEventListener("click", () => {
+            readmeContainer.classList.remove("balloon");
+            readmeContainer.classList.add("slide-out-left");
+
+            // 애니메이션이 끝난 후 요소 제거
+            readmeContainer.addEventListener(
+              "animationend",
+              () => {
+                readmeContainer.remove();
+              },
+              { once: true }
+            );
+          });
+        }
       }
       const btnClose = readmeContainer.querySelector(".btn-close");
       if (btnClose) {
@@ -65,22 +115,13 @@ document.addEventListener("DOMContentLoaded", () => {
           readmeContainer.classList.add("balloon-reverse");
 
           // 애니메이션이 끝난 후 요소 제거
-          readmeContainer.addEventListener("animationend", () => {
-            readmeContainer.remove();
-          }, { once: true });
-        });
-      }
-
-      const btnMin = readmeContainer.querySelector(".btn-min");
-      if (btnMin) {
-        btnMin.addEventListener("click", () => {
-          readmeContainer.classList.remove("balloon");
-          readmeContainer.classList.add("slide-out-right");
-
-          // 애니메이션이 끝난 후 요소 제거
-          readmeContainer.addEventListener("animationend", () => {
-            readmeContainer.remove();
-          }, { once: true });
+          readmeContainer.addEventListener(
+            "animationend",
+            () => {
+              readmeContainer.remove();
+            },
+            { once: true }
+          );
         });
       }
     });

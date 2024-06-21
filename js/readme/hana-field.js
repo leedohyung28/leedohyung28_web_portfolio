@@ -8,7 +8,7 @@ hanaField.innerHTML = `
 <i class="fa-solid fa-circle ml-2 btn-max" style="color: #04B404;"></i></div>
 <div class="readme-border content-extracurri">
 <h5 class="text-center">(주)하나비전테크</h5>
-<h5 class="text-center">현장 실습</h5>
+<h5 id="readmeTitle" class="text-center">현장 실습</h5>
 <p class="text-center">의료 기기 AI 딥러닝 모델 이식</p>
 
 <hr style="border: 1px solid white; width: 100%;">
