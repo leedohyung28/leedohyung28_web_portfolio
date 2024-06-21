@@ -3,6 +3,25 @@ document.addEventListener("DOMContentLoaded", () => {
   const profileContainer = document.querySelector(".col-9.text-white");
   let readmeMarginTop;
 
+  const rightReadmeContainers = {
+    3: osSimulator,
+    5: exchangeGermany,
+    8: anythink,
+    11: roadAnalysis,
+  };
+
+  const leftReadmeContainers = {
+    4: bcsdMobile,
+    6: powerBI,
+    7: bcsdGame,
+    9: eipCertification,
+    10: hanaField,
+    12: koreatechour,
+    13: playball,
+    14: instaGenerator,
+    15: webFullstack,
+  };
+
   timelineContents.forEach((box, index) => {
     box.addEventListener("click", () => {
       const existingReadmeLeft = document.querySelector(".readme-left");
@@ -23,93 +42,68 @@ document.addEventListener("DOMContentLoaded", () => {
         // readmeContainer.textContent = index;
         profileContainer.insertAdjacentElement("afterend", readmeContainer);
 
-        if (index == 3) {
-          readmeContainer.appendChild(osSimulator);
-          readmeMarginTop = "550px";
-        } else if (index == 5) {
-          readmeContainer.appendChild(exchangeGermany);
-          readmeMarginTop = "1050px";
-        } else if (index == 8) {
-          readmeContainer.appendChild(anythink);
-          readmeMarginTop = "1500px";
-        } else if (index == 11) {
-          readmeContainer.appendChild(roadAnalysis);
-          readmeMarginTop = "2200px";
+        if (index in rightReadmeContainers) {
+          readmeContainer.appendChild(rightReadmeContainers[index]);
+          readmeMarginTop = {
+            3: "550px",
+            5: "1050px",
+            8: "1500px",
+            11: "2200px",
+          }[index];
         }
         readmeContainer.classList.add("balloon");
 
-        const rightArrowContainer = document.getElementById("right-arrow-container");
-        rightArrowContainer.style.width = "100%"
-        const btnMin = readmeContainer.querySelector(".btn-min");
-        if (btnMin) {
-          btnMin.addEventListener("click", () => {
-            readmeContainer.classList.remove("balloon");
-            readmeContainer.classList.add("slide-out-right");
-            console.log(readmeMarginTop)
+        const rightArrowContainer = document.getElementById(
+          "right-arrow-container"
+        );
+        rightArrowContainer.style.width = "100%";
+        rightArrowContainer.style.textAlign = "right";
 
-            // 애니메이션이 끝난 후 요소 제거
-            readmeContainer.addEventListener(
-              "animationend",
-              () => {
-                readmeContainer.style.display = "none"; // 요소를 숨깁니다.
-                const readmeTitle =
-                  readmeContainer.querySelector("#readmeTitle");
-                const titleText = readmeTitle
-                  ? readmeTitle.textContent
-                  : "Restored Container";
-
-                rightArrowContainer.classList.add("visible");
-                rightArrowContainer.style.marginTop = readmeMarginTop;
-                rightArrowContainer.innerHTML = `${titleText} <span>&#9654;</span>`; // 화살표 추가
-              },
-              { once: true }
-            );
-          });
-        }
-        rightArrowContainer.addEventListener("click", () => {
-          readmeContainer.style.display = "block"; // 요소를 다시 보이게 합니다.
-          readmeContainer.classList.remove("slide-out-right");
-          readmeContainer.classList.add("balloon"); // 원래 상태로 복원
-          rightArrowContainer.classList.remove("visible");
-          rightArrowContainer.innerHTML = ""; // 화살표와 텍스트 제거
-        });
+        initializeCloseButton(readmeContainer);
+        initializeMinimizeButton(
+          readmeContainer,
+          rightArrowContainer,
+          index,
+          readmeMarginTop,
+          rightReadmeContainers,
+          profileContainer
+        );
       } else {
         readmeContainer.classList.add("readme-left");
         // readmeContainer.textContent = index;
 
         profileContainer.insertAdjacentElement("beforebegin", readmeContainer);
-        if (index == 4) {
-          readmeContainer.appendChild(bcsdMobile);
-          readmeMarginTop = "640px";
-        } else if (index == 6) {
-          readmeContainer.appendChild(powerBI);
-          readmeMarginTop = "970px";
-        } else if (index == 7) {
-          readmeContainer.appendChild(bcsdGame);
-          readmeMarginTop = "1300px";
-        } else if (index == 9) {
-          readmeContainer.appendChild(eipCertification);
-          readmeMarginTop = "1505px";
-        } else if (index == 10) {
-          readmeContainer.appendChild(hanaField);
-          readmeMarginTop = "1680px";
-        } else if (index == 12) {
-          readmeContainer.appendChild(koreatechour);
-          readmeMarginTop = "1880px";
-        } else if (index == 13) {
-          readmeContainer.appendChild(playball);
-          readmeMarginTop = "2060px";
-        } else if (index == 14) {
-          readmeContainer.appendChild(instaGenerator);
-          readmeMarginTop = "2350px";
-        } else if (index == 15) {
-          readmeContainer.appendChild(webFullstack);
-          readmeMarginTop = "2640px";
+
+        if (index in leftReadmeContainers) {
+          readmeContainer.appendChild(leftReadmeContainers[index]);
+          readmeMarginTop = {
+            4: "640px",
+            6: "970px",
+            7: "1300px",
+            9: "1505px",
+            10: "1680px",
+            12: "1880px",
+            13: "2060px",
+            14: "2350px",
+            15: "2640px",
+          }[index];
         }
+
         readmeContainer.classList.add("balloon");
-        const leftArrowContainer = document.getElementById("left-arrow-container");
-        leftArrowContainer.style.textAlign = "right";
+        const leftArrowContainer = document.getElementById(
+          "left-arrow-container"
+        );
         leftArrowContainer.style.width = "100%";
+
+        initializeCloseButton(readmeContainer);
+        initializeMinimizeButton(
+          readmeContainer,
+          leftArrowContainer,
+          index,
+          readmeMarginTop,
+          leftReadmeContainers,
+          profileContainer
+        );
 
         const btnMin = readmeContainer.querySelector(".btn-min");
         if (btnMin) {
@@ -145,22 +139,100 @@ document.addEventListener("DOMContentLoaded", () => {
           leftArrowContainer.innerHTML = ""; // 화살표와 텍스트 제거
         });
       }
-      const btnClose = readmeContainer.querySelector(".btn-close");
-      if (btnClose) {
-        btnClose.addEventListener("click", () => {
-          readmeContainer.classList.remove("balloon");
-          readmeContainer.classList.add("balloon-reverse");
-
-          // 애니메이션이 끝난 후 요소 제거
-          readmeContainer.addEventListener(
-            "animationend",
-            () => {
-              readmeContainer.remove();
-            },
-            { once: true }
-          );
-        });
-      }
     });
   });
 });
+
+function initializeCloseButton(readmeContainer) {
+  const btnClose = readmeContainer.querySelector(".btn-close");
+  if (btnClose) {
+    btnClose.addEventListener("click", () => {
+      readmeContainer.classList.remove("balloon");
+      readmeContainer.classList.add("balloon-reverse");
+
+      // 애니메이션이 끝난 후 요소 제거
+      readmeContainer.addEventListener(
+        "animationend",
+        () => {
+          readmeContainer.remove();
+        },
+        { once: true }
+      );
+    });
+  }
+}
+
+function initializeMinimizeButton(
+  readmeContainer,
+  arrowContainer,
+  index,
+  readmeMarginTop,
+  readmeContainers,
+  profileContainer
+) {
+  const btnMin = readmeContainer.querySelector(".btn-min");
+  if (btnMin) {
+    btnMin.addEventListener("click", () => {
+      readmeContainer.classList.remove("balloon");
+      readmeContainer.classList.add("slide-out-right");
+
+      readmeContainer.addEventListener(
+        "animationend",
+        () => {
+          readmeContainer.remove();
+          const readmeTitle = readmeContainer.querySelector("#readmeTitle");
+          const titleText = readmeTitle
+            ? readmeTitle.textContent
+            : "Restored Container";
+
+          if (!arrowContainer.classList.contains("visible")) {
+            arrowContainer.classList.add("visible");
+          }
+
+          arrowContainer.innerHTML += `<p id="arrow-${index}" style="position:absolute; right:0; margin-top:${readmeMarginTop};">${titleText} <span>&#9654;</span></p>`;
+          arrowContainer.addEventListener("click", (event) => {
+            const clickedElement = event.target.closest("p");
+            if (clickedElement && clickedElement.id.startsWith("arrow-")) {
+              const arrowIndex = parseInt(clickedElement.id.split("-")[1]);
+              clickedElement.remove();
+
+              const newReadmeContainer = document.createElement("div");
+              newReadmeContainer.classList.add(
+                "readme-container",
+                "col-3",
+                "readme-right",
+                "balloon"
+              );
+              if (arrowIndex) {
+                newReadmeContainer.appendChild(readmeContainers[arrowIndex]);
+              }
+              profileContainer.insertAdjacentElement(
+                "afterend",
+                newReadmeContainer
+              );
+
+              initializeCloseButton(newReadmeContainer);
+              initializeMinimizeButton(
+                newReadmeContainer,
+                arrowContainer,
+                index,
+                readmeMarginTop,
+                readmeContainers,
+                profileContainer
+              );
+            }
+
+            readmeContainer.style.display = "block";
+            readmeContainer.classList.remove("slide-out-right");
+            readmeContainer.classList.add("balloon");
+
+            if (rightArrowContainer.innerHTML.trim() === "") {
+              rightArrowContainer.classList.remove("visible");
+            }
+          });
+        },
+        { once: true }
+      );
+    });
+  }
+}
