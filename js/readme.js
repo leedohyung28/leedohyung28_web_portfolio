@@ -106,6 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
           profileContainer,
           "left"
         );
+        initializeMaximizeButton(readmeContainer)
       }
     });
   });
@@ -241,4 +242,48 @@ function initializeMinimizeButton(
       );
     });
   }
+}
+
+function initializeMaximizeButton(readmeContainer) {
+  const maxButton = readmeContainer.querySelector(".btn-max");
+  const w100Element = readmeContainer.querySelector(".w-100");
+  let originalMarginTop = w100Element ? w100Element.style.marginTop : null;
+  let isMaximized = false;
+
+  maxButton.addEventListener("click", () => {
+    const timelineSection = document.querySelector("section.timeline");
+
+    if (!isMaximized) {
+      timelineSection.style.display = "none"; // 타임라인 섹션 숨기기
+
+      if (w100Element) {
+        originalMarginTop = w100Element.style.marginTop;
+        w100Element.style.marginTop = "0px";
+      }
+
+      readmeContainer.style.position = "fixed";
+      readmeContainer.style.top = 0;
+      readmeContainer.style.left = 0;
+      readmeContainer.style.width = "100%";
+      readmeContainer.style.height = "100%";
+      readmeContainer.style.zIndex = 9999; // 가장 위에 보이도록 z-index 설정
+
+      isMaximized = true;
+    } else {
+      timelineSection.style.display = ""; // 타임라인 섹션 보이기
+
+      if (w100Element) {
+        w100Element.style.marginTop = originalMarginTop;
+      }
+
+      readmeContainer.style.position = "";
+      readmeContainer.style.top = "";
+      readmeContainer.style.left = "";
+      readmeContainer.style.width = "";
+      readmeContainer.style.height = "";
+      readmeContainer.style.zIndex = "";
+
+      isMaximized = false;
+    }
+  });
 }
