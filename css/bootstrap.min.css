@@ -73,11 +73,9 @@ section {
 
 body {
   margin: 0;
-  font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
+  font-family: "IBM Plex Sans KR", sans-serif;
   font-weight: 400;
+  font-style: normal;
   line-height: 1.5;
   color: #212529;
   text-align: left;
@@ -401,37 +399,37 @@ h6,
 
 h1,
 .h1 {
-  font-size: 7vim;
+  font-size: 3.5em;
 }
 
 h2,
 .h2 {
-  font-size: 6vmin;
+  font-size: 3em;
 }
 
 h3,
 .h3 {
-  font-size: 5vmin;
+  font-size: 2.5em;
 }
 
 h4,
 .h4 {
-  font-size: 4vmin;
+  font-size: 2em;
 }
 
 h5,
 .h5 {
-  font-size: 3.5vmin;
+  font-size: 1.5em;
 }
 
 h6,
 .h6 {
-  font-size: 3vmin;
+  font-size: 1em;
 }
 
 p,
 .p {
-  font-size: 2vmin;
+  font-size: 1em;
 }
 
 .lead {
@@ -7940,7 +7938,6 @@ button.bg-dark:focus {
   width: 40% !important;
 }
 
-
 .w-45 {
   width: 46% !important;
 }
@@ -7956,7 +7953,6 @@ button.bg-dark:focus {
 .w-80 {
   width: 80% !important;
 }
-
 
 .w-100 {
   width: 100% !important;

@@ -7,7 +7,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
       rel="stylesheet"
@@ -19,7 +24,7 @@
     />
     <link rel="stylesheet" href="fonts/icomoon/style.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/lightgallery.min.css" />
+    <!-- <link rel="stylesheet" href="css/lightgallery.min.css" /> -->
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -38,11 +43,9 @@
         <div class="container-fluid">
           <div class="row align-items-center">
             <div class="col-6 col-xl-4" data-aos="fade-down">
-              <h1 class="mb-0">
-                <a href="index.html" class="text-white h2 mb-0"
-                  >Web Portfolio</a
-                >
-              </h1>
+              <a href="index.html" class="title text-white mb-0"
+                >Web Portfolio</a
+              >
             </div>
             <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
               <nav
@@ -50,48 +53,29 @@
                 role="navigation"
               >
                 <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                  <li class="active"><a href="index.html">Home</a></li>
-                  <li class="has-children">
-                    <a>Other Projects</a>
-                    <ul class="dropdown">
-                      <li class="has-children">
-                        <a href="#">Scheduling Algorithm GUI (Python)</a>
-                        <ul class="dropdown">
-                          <li>
-                            <a
-                              href="https://github.com/leedohyung28/OS-Scheduling-Algorithm-TeamProject/releases/tag/OS-Scheduling"
-                              >Releases</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="https://github.com/leedohyung28/OS-Scheduling-Algorithm-TeamProject"
-                              >GitHub</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li>
-                        <a href="https://github.com/leedohyung28/Yupki"
-                          >Yupdduk Menu (C++)</a
-                        >
-                      </li>
-
-                      <li>
-                        <a href="https://github.com/leedohyung28/BCSD_Game/"
-                          >Game Imitate (Imcompleted, Unity, C#)</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a href="about.html">ABOUT ME</a></li>
-                  <li><a href="https://github.com/leedohyung28">GITHUB</a></li>
-                  <li>
-                    <a href="https://velog.io/@leedohyung28/series">VELOG</a>
+                  <li class="active">
+                    <a class="nav-sub" href="index.html">HOME</a>
                   </li>
                   <li>
-                    <a href="https://medium.com/@dhleee0123">MEDIUM</a>
+                    <a class="nav-sub" href="projects.html">PROJECTS</a>
+                  </li>
+                  <li><a class="nav-sub" href="about.html">ABOUT ME</a></li>
+                  <li>
+                    <a class="nav-sub" href="https://github.com/leedohyung28"
+                      >GITHUB</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      class="nav-sub"
+                      href="https://velog.io/@leedohyung28/series"
+                      >VELOG</a
+                    >
+                  </li>
+                  <li>
+                    <a class="nav-sub" href="https://medium.com/@dhleee0123"
+                      >MEDIUM</a
+                    >
                   </li>
                 </ul>
               </nav>
@@ -117,8 +101,8 @@
           <div class="ml-3 align-content-center">
             <h2 class="mt-2">이도형</h2>
             <h4>LEE DOHYUNG</h4>
-            <p class="mb-1">경청하고 실천하는 웹 기반 육각형 개발자</p>
-            <p>Listening and Acting Web Developer</p>
+            <h5 class="mb-1">경청하고 실천하는 웹 기반 육각형 개발자</h5>
+            <h5>Listening and Acting Web Developer</h5>
           </div>
         </div>
         <div class="form-row justify-content-center">
@@ -269,7 +253,9 @@
                     <i class="devicon-python-plain"></i>
                     <i class="devicon-pytorch-original"></i>
                     <i class="devicon-opencv-plain"></i>
-                    <i class="devicon-react-original"></i>
+                    <i class="devicon-dart-plain"></i>
+                    <i class="devicon-flutter-plain"></i>
+                    <i class="devicon-firebase-plain"></i>
                     <i class="devicon-ubuntu-plain-wordmark"></i>
                     <i class="devicon-amazonwebservices-plain-wordmark"></i>
                   </div>

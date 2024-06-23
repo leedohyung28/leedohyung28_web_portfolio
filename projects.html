@@ -7,7 +7,12 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+      rel="stylesheet"
+    />
     <link
       href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&family=Roboto+Mono:wght@400;700&display=swap"
       rel="stylesheet"
@@ -37,12 +42,10 @@
       <header class="site-navbar py-3" role="banner">
         <div class="container-fluid">
           <div class="row align-items-center">
-            <div class="col-6 col-xl-2" data-aos="fade-down">
-              <h1 class="mb-0">
-                <a href="index.html" class="text-white h2 mb-0"
-                  >Web Portfolio</a
-                >
-              </h1>
+            <div class="col-6 col-xl-4" data-aos="fade-down">
+              <a href="index.html" class="title text-white mb-0"
+                >Web Portfolio</a
+              >
             </div>
             <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
               <nav
@@ -50,58 +53,33 @@
                 role="navigation"
               >
                 <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                  <li class="active"><a href="index.html">Home</a></li>
-                  <li class="has-children">
-                    <a>Other Projects</a>
-                    <ul class="dropdown">
-                      <li class="has-children">
-                        <a href="#">Scheduling Algorithm GUI (Python)</a>
-                        <ul class="dropdown">
-                          <li>
-                            <a
-                              href="https://github.com/leedohyung28/OS-Scheduling-Algorithm-TeamProject/releases/tag/OS-Scheduling"
-                              >Releases</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="https://github.com/leedohyung28/OS-Scheduling-Algorithm-TeamProject"
-                              >GitHub</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li>
-                        <a href="https://github.com/leedohyung28/Yupki"
-                          >Yupdduk Menu (C++)</a
-                        >
-                      </li>
-
-                      <li>
-                        <a href="https://github.com/leedohyung28/BCSD_Game/"
-                          >Game Imitate (Imcompleted, Unity, C#)</a
-                        >
-                      </li>
-                    </ul>
+                  <li><a class="nav-sub" href="index.html">HOME</a></li>
+                  <li class="active">
+                    <a class="nav-sub" href="projects.html">PROJECTS</a>
                   </li>
-                  <li><a href="about.html">ABOUT ME</a></li>
-                  <li><a href="https://github.com/leedohyung28">GITHUB</a></li>
+                  <li><a class="nav-sub" href="about.html">ABOUT ME</a></li>
                   <li>
-                    <a href="https://velog.io/@leedohyung28/series">VELOG</a>
+                    <a class="nav-sub" href="https://github.com/leedohyung28"
+                      >GITHUB</a
+                    >
                   </li>
                   <li>
-                    <a href="https://medium.com/@dhleee0123">MEDIUM</a>
+                    <a
+                      class="nav-sub"
+                      href="https://velog.io/@leedohyung28/series"
+                      >VELOG</a
+                    >
+                  </li>
+                  <li>
+                    <a class="nav-sub" href="https://medium.com/@dhleee0123"
+                      >MEDIUM</a
+                    >
                   </li>
                 </ul>
               </nav>
             </div>
 
             <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
-              <div class="d-none d-xl-inline-block">
-                <p>Contact : dhleee0123@gmail.com</p>
-              </div>
-
               <div
                 class="d-inline-block d-xl-none ml-md-0 mr-auto py-3"
                 style="position: relative; top: 3px"
@@ -116,128 +94,183 @@
       </header>
 
       <div class="container-fluid" data-aos="fade" data-aos-delay="500">
+        <!-- <div class="col-lg-12">
+          <input type="checkbox" id="python" /><label for="python"
+            >Python</label
+          >
+          <input type="checkbox" id="HTML" /><label for="HTML">HTML</label>
+          <input type="checkbox" id="CSS" /><label for="CSS">CSS</label>
+          <input type="checkbox" id="PHP" /><label for="PHP">PHP</label>
+          <input type="checkbox" id="dart" /><label for="dart">Dart</label>
+          <input type="checkbox" id="csharp" /><label for="csharp">C#</label>
+          <input type="checkbox" id="js" /><label for="js">JavaScript</label>
+        </div> -->
         <div class="row">
-          <div class="col-4 profile">
-            <img src="images/profile_image.jpg" class="img-profile" />
-            <h2 class="mt-2">이도형</h2>
-            <p>LEE DOHYUNG</p>
-            <h5>경청하고 실천하는 웹 기반 육각형 개발자</h5>
+          <div class="col-lg-4">
+            <div class="image-wrap-2">
+              <div class="image-info">
+                <h5 class="mb-3 text-white">Instagram Name Generator</h5>
+                <h6>인스타그램 이름 생성기</h6>
+                <a
+                  href="https://instanamesuggest.netlify.app/"
+                  class="btn btn-outline-white py-2 px-4 mb-2"
+                  >Korean Ver.</a
+                >
+                <a
+                  href="https://ignamegenerator.netlify.app/"
+                  class="btn btn-outline-white py-2 px-4 mb-2"
+                  >English Ver.</a
+                >
+                <h6>HTML, CSS, JavaScript</h6>
+                <h6>Node.js</h6>
+                <p class="text-white">24.01 ~ 24.02</p>
+              </div>
+              <img src="images/ing.jpg" alt="Image" class="img-fluid" />
+            </div>
           </div>
-          <div class="col-8">
-            <div class="row">
-              <div class="col-lg-12">
-                <div class="image-wrap-2">
-                  <div class="image-info">
-                    <h5 class="mb-3 text-white">Insta Name Generator</h5>
-                    <h6>인스타그램 이름 생성기</h6>
-                    <a
-                      href="https://instanamesuggest.netlify.app/"
-                      class="btn btn-outline-white py-2 px-4 mb-2"
-                      >Korean Ver.</a
-                    >
-                    <a
-                      href="https://ignamegenerator.netlify.app/"
-                      class="btn btn-outline-white py-2 px-4 mb-2"
-                      >English Ver.</a
-                    >
-                    <h6>HTML5, CSS3, JS</h6>
-                    <p class="text-white">24.01 ~ 24.02, 24.05</p>
-                  </div>
-                  <img src="images/ing.jpg" alt="Image" class="img-fluid" />
-                </div>
-              </div>
 
-              <div class="col-lg-12">
-                <div class="image-wrap-2">
-                  <div class="image-info">
-                    <h2 class="mb-3">PLAYBALL</h2>
-                    <h6>야구 관련 반응형 웹 앱</h6>
-                    <a
-                      href="https://leedohyung28.github.io/PlayBall.io/"
-                      class="btn btn-outline-white py-2 px-4 mb-2"
-                      >Homepage</a
-                    >
-                    <a
-                      href="https://github.com/leedohyung28/PlayBall"
-                      class="btn btn-outline-white py-2 px-4 mb-2"
-                      >GitHub</a
-                    >
-                    <h6>Dart / Flutter</h6>
-                    <p class="text-white">23.12</p>
-                  </div>
-                  <img
-                    src="images/playball.jpg"
-                    alt="Image"
-                    class="img-fluid"
-                  />
-                </div>
+          <div class="col-lg-4">
+            <div class="image-wrap-2">
+              <div class="image-info">
+                <h2 class="mb-3">PLAYBALL</h2>
+                <h6>야구 관련 반응형 웹 앱</h6>
+                <a
+                  href="https://leedohyung28.github.io/PlayBall.io/"
+                  class="btn btn-outline-white py-2 px-4 mb-2"
+                  >Homepage</a
+                >
+                <a
+                  href="https://github.com/leedohyung28/PlayBall"
+                  class="btn btn-outline-white py-2 px-4 mb-2"
+                  >GitHub</a
+                >
+                <h6>Dart</h6>
+                <p class="text-white">23.12</p>
               </div>
-              <div class="col-lg-12">
-                <div class="image-wrap-2">
-                  <div class="image-info">
-                    <h2 class="mb-3">KOREATECHOUR</h2>
-                    <h6>대학교 졸업 도우미</h6>
-                    <a
-                      href="https://github.com/leedohyung28/BestWebProgramming/releases"
-                      class="btn btn-outline-white py-2 px-4 mb-2"
-                      >Releases</a
-                    >
-                    <a
-                      href="https://github.com/leedohyung28/BestWebProgramming"
-                      class="btn btn-outline-white py-2 px-4 mb-2"
-                      >GitHub</a
-                    >
-                    <h6>C#, MySQL</h6>
-                    <p class="text-white">23.10 ~ 23.12</p>
-                  </div>
-                  <img
-                    src="images/graduate.jpg"
-                    alt="Image"
-                    class="img-fluid"
-                  />
-                </div>
-              </div>
+              <img src="images/playball.jpg" alt="Image" class="img-fluid" />
+            </div>
+          </div>
 
-              <div class="col-lg-12">
-                <div class="image-wrap-2">
-                  <div class="image-info">
-                    <h2 class="mb-3">I ❤ Movies</h2>
-                    <h6>영화 온라인 커뮤니티</h6>
-                    <a
-                      href="https://github.com/leedohyung28/ILoveMovies"
-                      class="btn btn-outline-white py-2 px-4 mb-4"
-                      >GitHub</a
-                    >
-                    <h6>PHP, HTML5, CSS3</h6>
-                    <p class="text-white">22.05 ~ 22.06</p>
-                  </div>
-                  <img src="images/ilm.jpg" alt="Image" class="img-fluid" />
-                </div>
+          <div class="col-lg-4">
+            <div class="image-wrap-2">
+              <div class="image-info">
+                <h3 class="mb-3 text-white">KOREATECHOUR</h3>
+                <h6>대학교 졸업 도우미</h6>
+                <a
+                  href="https://github.com/leedohyung28/BestWebProgramming/releases"
+                  class="btn btn-outline-white py-2 px-4 mb-2"
+                  >Releases</a
+                >
+                <a
+                  href="https://github.com/leedohyung28/BestWebProgramming"
+                  class="btn btn-outline-white py-2 px-4 mb-2"
+                  >GitHub</a
+                >
+                <h6>C#, MySQL</h6>
+                <p class="text-white">23.10 ~ 23.12</p>
               </div>
+              <img src="images/graduate.jpg" alt="Image" class="img-fluid" />
+            </div>
+          </div>
 
-              <div class="col-lg-12">
-                <div class="image-wrap-2">
-                  <div class="image-info">
-                    <h4 class="mb-3 text-white">BUY BY BOOKS</h4>
-                    <h6>도서 구매 웹 페이지</h6>
-                    <a
-                      href="https://leedohyung28.github.io/BuyByBooks/"
-                      class="btn btn-outline-white py-2 px-4 mb-2"
-                      >Homepage</a
-                    >
-                    <a
-                      href="https://github.com/leedohyung28/BuyByBooks"
-                      class="btn btn-outline-white py-2 px-4 mb-2"
-                      >GitHub</a
-                    >
-                    <h6>HTML5, CSS3, JS</h6>
-                    <p class="text-white">24.05</p>
-                  </div>
-                  <img src="images/books.jpg" alt="Image" class="img-fluid" />
-                </div>
+          <div class="col-lg-4">
+            <div class="image-wrap-2">
+              <div class="image-info">
+                <h2 class="mb-3">I ❤ Movies</h2>
+                <h6>영화 온라인 커뮤니티</h6>
+                <a
+                  href="https://github.com/leedohyung28/ILoveMovies"
+                  class="btn btn-outline-white py-2 px-4 mb-4"
+                  >GitHub</a
+                >
+                <h6>PHP, HTML, CSS</h6>
+                <h6>Apache, MariaDB</h6>
+                <p class="text-white">22.05 ~ 22.06</p>
               </div>
+              <img src="images/ilm.jpg" alt="Image" class="img-fluid" />
+            </div>
+          </div>
 
-              <!-- <div class="col-lg-12">
+          <div class="col-lg-4">
+            <div class="image-wrap-2">
+              <div class="image-info">
+                <h4 class="mb-3 text-white">Scheduler Simulator</h4>
+                <h6>스케줄링 알고리즘 동작기</h6>
+                <a
+                  href="https://github.com/leedohyung28/OS-Scheduling-Algorithm-TeamProject/releases/tag/OS-Scheduling/"
+                  class="btn btn-outline-white py-2 px-4 mb-2"
+                  >Release</a
+                >
+                <a
+                  href="https://github.com/leedohyung28/OS-Scheduling-Algorithm-TeamProject"
+                  class="btn btn-outline-white py-2 px-4 mb-2"
+                  >GitHub</a
+                >
+                <h6>Python</h6>
+                <p class="text-white">22.03 ~ 22.05</p>
+              </div>
+              <img src="images/ops.jpg" alt="Image" class="img-fluid" />
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="image-wrap-2">
+              <div class="image-info">
+                <h4 class="mb-3 text-white">BUY BY BOOKS</h4>
+                <h6>도서 구매 웹 페이지</h6>
+                <a
+                  href="https://leedohyung28.github.io/BuyByBooks/"
+                  class="btn btn-outline-white py-2 px-4 mb-2"
+                  >Homepage</a
+                >
+                <a
+                  href="https://github.com/leedohyung28/BuyByBooks"
+                  class="btn btn-outline-white py-2 px-4 mb-2"
+                  >GitHub</a
+                >
+                <h6>HTML, CSS, JavaScript</h6>
+                <p class="text-white">24.05</p>
+              </div>
+              <img src="images/books.jpg" alt="Image" class="img-fluid" />
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="image-wrap-2">
+              <div class="image-info">
+                <h4 class="mb-3 text-white">Yupdduk Menu</h4>
+                <h6>엽기떡볶이 메뉴판</h6>
+                <a
+                  href="https://github.com/leedohyung28/Yupki"
+                  class="btn btn-outline-white py-2 px-4 mb-2"
+                  >GitHub</a
+                >
+                <h6>C++</h6>
+                <p class="text-white">21.06</p>
+              </div>
+              <img src="images/ykt.jpg" alt="Image" class="img-fluid" />
+            </div>
+          </div>
+
+          <div class="col-lg-4">
+            <div class="image-wrap-2">
+              <div class="image-info">
+                <h5 class="mb-3 text-white">Road Hazard Detection System</h5>
+                <h6>도로 상태 분석 시스템</h6>
+                <a
+                  href="https://github.com/leedohyung28/road-hazard-detect-system"
+                  class="btn btn-outline-white py-2 px-4 mb-2"
+                  >GitHub</a
+                >
+                <h6>Python, Dart</h6>
+                <h6>Firebase</h6>
+                <p class="text-white">23.11 ~ 24.05</p>
+              </div>
+              <img src="images/rhs.jpg" alt="Image" class="img-fluid" />
+            </div>
+          </div>
+
+          <!-- <div class="col-lg-4">
                 <div class="image-wrap-2">
                   <div class="image-info">
                     <h2 class="mb-3">TICKET LION</h2>
@@ -247,7 +280,7 @@
                       class="btn btn-outline-white py-2 px-4 mb-4"
                       >Homepage</a
                     >
-                    <h6>HTML5, CSS3, JS</h6>
+                    <h6>HTML5, CSS, JS</h6>
                     <p class="text-white">24.05</p>
                   </div>
                   <img
@@ -257,8 +290,6 @@
                   />
                 </div>
               </div> -->
-            </div>
-          </div>
         </div>
       </div>
 

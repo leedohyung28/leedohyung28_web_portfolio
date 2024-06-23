@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const timelineContents = document.querySelectorAll(".timeline-content");
   const profileContainer = document.querySelector(".col-9.text-white");
-  let readmeMarginTop;
 
   const rightReadmeContainers = {
     3: osSimulator,
@@ -34,9 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
       readmeContainer.classList.add("col-3");
 
       nonContents = [0, 1, 2];
-      rightContents = [3, 5, 8, 11, 16];
-
-      if (nonContents.includes(index)) {
+      rightContents = [3, 5, 8, 11];
+      if (nonContents.includes(index) || arrowArray[index]) {
       } else if (rightContents.includes(index)) {
         readmeContainer.classList.add("readme-right");
         // readmeContainer.textContent = index;
@@ -44,12 +42,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (index in rightReadmeContainers) {
           readmeContainer.appendChild(rightReadmeContainers[index]);
-          readmeMarginTop = {
-            3: "550px",
-            5: "1050px",
-            8: "1500px",
-            11: "2200px",
-          }[index];
         }
         readmeContainer.classList.add("balloon");
 
@@ -59,16 +51,16 @@ document.addEventListener("DOMContentLoaded", () => {
         rightArrowContainer.style.width = "100%";
         rightArrowContainer.style.textAlign = "right";
 
-        initializeCloseButton(readmeContainer);
+        initializeCloseButton(readmeContainer, index);
         initializeMinimizeButton(
           readmeContainer,
           rightArrowContainer,
           index,
-          readmeMarginTop,
           rightReadmeContainers,
           profileContainer,
           "right"
         );
+        initializeMaximizeButton(readmeContainer, index);
       } else {
         readmeContainer.classList.add("readme-left");
         // readmeContainer.textContent = index;
@@ -77,17 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (index in leftReadmeContainers) {
           readmeContainer.appendChild(leftReadmeContainers[index]);
-          readmeMarginTop = {
-            4: "640px",
-            6: "970px",
-            7: "1300px",
-            9: "1505px",
-            10: "1680px",
-            12: "1880px",
-            13: "2060px",
-            14: "2350px",
-            15: "2640px",
-          }[index];
         }
 
         readmeContainer.classList.add("balloon");
@@ -96,26 +77,76 @@ document.addEventListener("DOMContentLoaded", () => {
         );
         leftArrowContainer.style.width = "100%";
 
-        initializeCloseButton(readmeContainer);
+        initializeCloseButton(readmeContainer, index);
         initializeMinimizeButton(
           readmeContainer,
           leftArrowContainer,
           index,
-          readmeMarginTop,
           leftReadmeContainers,
           profileContainer,
           "left"
         );
-        initializeMaximizeButton(readmeContainer)
+        initializeMaximizeButton(readmeContainer, index);
       }
     });
   });
 });
 
-function initializeCloseButton(readmeContainer) {
+let maxiArray = Array(16).fill(false);
+let arrowArray = Array(16).fill(false);
+const arrayTops = {
+  3: "820px",
+  4: "840px",
+  5: "1200px",
+  6: "1170px",
+  7: "1500px",
+  8: "1700px",
+  9: "1675px",
+  10: "1920px",
+  11: "2500px",
+  12: "2100px",
+  13: "2460px",
+  14: "2820px",
+  15: "3150px",
+};
+const containerTops = {
+  3: "100px",
+  4: "600px",
+  5: "900px",
+  6: "850px",
+  7: "1270px",
+  8: "1300px",
+  9: "1500px",
+  10: "1500px",
+  11: "2000px",
+  12: "1600px",
+  13: "1950px",
+  14: "2350px",
+  15: "2900px",
+};
+
+function initializeCloseButton(readmeContainer, index) {
   const btnClose = readmeContainer.querySelector(".btn-close");
   if (btnClose) {
     btnClose.addEventListener("click", () => {
+      arrowArray[index] = false;
+      if (maxiArray[index]) {
+        const timelineSection = document.querySelector("section.timeline");
+        let w100Element = document.getElementById("readmeCon");
+
+        timelineSection.style.display = "";
+        w100Element.style.marginTop = containerTops[index];
+
+        readmeContainer.style.display = "";
+        readmeContainer.style.top = "";
+        readmeContainer.style.left = "";
+        readmeContainer.style.width = "";
+        readmeContainer.style.height = "";
+        readmeContainer.style.zIndex = "";
+
+        maxiArray[index] = false;
+      }
+
       readmeContainer.classList.remove("balloon");
       readmeContainer.classList.add("balloon-reverse");
 
@@ -135,7 +166,6 @@ function initializeMinimizeButton(
   readmeContainer,
   arrowContainer,
   index,
-  readmeMarginTop,
   readmeContainers,
   profileContainer,
   leftOrRight
@@ -143,9 +173,26 @@ function initializeMinimizeButton(
   const btnMin = readmeContainer.querySelector(".btn-min");
   if (btnMin) {
     btnMin.addEventListener("click", () => {
+      if (maxiArray[index]) {
+        const timelineSection = document.querySelector("section.timeline");
+        let w100Element = document.getElementById("readmeCon");
+
+        timelineSection.style.display = "";
+        w100Element.style.marginTop = containerTops[index];
+
+        readmeContainer.style.display = "";
+        readmeContainer.style.top = "";
+        readmeContainer.style.left = "";
+        readmeContainer.style.width = "";
+        readmeContainer.style.height = "";
+        readmeContainer.style.zIndex = "";
+
+        maxiArray[index] = false;
+      }
+
       readmeContainer.classList.remove("balloon");
       if (leftOrRight == "right") {
-      readmeContainer.classList.add("slide-out-right");
+        readmeContainer.classList.add("slide-out-right");
       } else {
         readmeContainer.classList.add("slide-out-left");
       }
@@ -164,62 +211,65 @@ function initializeMinimizeButton(
           }
 
           if (leftOrRight == "right") {
-            arrowContainer.innerHTML += `<p id="arrow-${index}" style="position:absolute; right:0; margin-top:${readmeMarginTop};">${titleText} <span>&#9654;</span></p>`;
-          }
-          else {
-            arrowContainer.innerHTML += `<p id="arrow-${index}" style="position:absolute; margin-top:${readmeMarginTop};"><span>&#9664;</span> ${titleText}</p>`;
+            arrowContainer.innerHTML += `<p id="arrow-${index}" class="arrow-right" style="margin-top:${arrayTops[index]};">${titleText} <span>&#9654;</span></p>`;
+          } else {
+            arrowContainer.innerHTML += `<p id="arrow-${index}" class="arrow-left" style="margin-top:${arrayTops[index]};"><span>&#9664;</span> ${titleText}</p>`;
           }
 
-          if (!arrowContainer.dataset.listenerAdded) {
+          if (!arrowArray[index]) {
             arrowContainer.addEventListener("click", (event) => {
               const clickedElement = event.target.closest("p");
               if (clickedElement && clickedElement.id.startsWith("arrow-")) {
                 const arrowIndex = parseInt(clickedElement.id.split("-")[1]);
                 clickedElement.remove();
 
-                const newReadmeContainer = document.createElement("div");
+                if (!document.querySelector(`.readme-container`)) {
+                  const newReadmeContainer = document.createElement("div");
 
-                if (leftOrRight === "right") {
-                  newReadmeContainer.classList.add(
-                    "readme-container",
-                    "col-3",
-                    "readme-right",
-                    "balloon"
-                  );
-                } else {
-                  newReadmeContainer.classList.add(
-                    "readme-container",
-                    "col-3",
-                    "readme-left",
-                    "balloon"
-                  );
-                }
+                  if (leftOrRight === "right") {
+                    newReadmeContainer.classList.add(
+                      "readme-container",
+                      "col-3",
+                      "readme-right",
+                      "balloon"
+                    );
+                  } else {
+                    newReadmeContainer.classList.add(
+                      "readme-container",
+                      "col-3",
+                      "readme-left",
+                      "balloon"
+                    );
+                  }
 
-                if (arrowIndex) {
-                  newReadmeContainer.appendChild(readmeContainers[arrowIndex]);
-                }
-                if (leftOrRight === "right") {
-                  profileContainer.insertAdjacentElement(
-                    "afterend",
-                    newReadmeContainer
-                  );
-                } else {
-                  profileContainer.insertAdjacentElement(
-                    "beforebegin",
-                    newReadmeContainer
-                  );
-                }
+                  if (arrowIndex) {
+                    newReadmeContainer.appendChild(
+                      readmeContainers[arrowIndex]
+                    );
+                  }
+                  if (leftOrRight === "right") {
+                    profileContainer.insertAdjacentElement(
+                      "afterend",
+                      newReadmeContainer
+                    );
+                  } else {
+                    profileContainer.insertAdjacentElement(
+                      "beforebegin",
+                      newReadmeContainer
+                    );
+                  }
 
-                initializeCloseButton(newReadmeContainer);
-                initializeMinimizeButton(
-                  newReadmeContainer,
-                  arrowContainer,
-                  index,
-                  readmeMarginTop,
-                  readmeContainers,
-                  profileContainer,
-                  leftOrRight
-                );
+                  initializeCloseButton(newReadmeContainer, index);
+                  initializeMinimizeButton(
+                    newReadmeContainer,
+                    arrowContainer,
+                    index,
+                    readmeContainers,
+                    profileContainer,
+                    leftOrRight
+                  );
+                  initializeMaximizeButton(newReadmeContainer, index);
+                }
               }
 
               if (leftOrRight === "right") {
@@ -235,7 +285,7 @@ function initializeMinimizeButton(
               }
             });
 
-            arrowContainer.dataset.listenerAdded = "true";
+            arrowArray[index] = true;
           }
         },
         { once: true }
@@ -244,46 +294,35 @@ function initializeMinimizeButton(
   }
 }
 
-function initializeMaximizeButton(readmeContainer) {
+function initializeMaximizeButton(readmeContainer, index) {
   const maxButton = readmeContainer.querySelector(".btn-max");
-  const w100Element = readmeContainer.querySelector(".w-100");
-  let originalMarginTop = w100Element ? w100Element.style.marginTop : null;
-  let isMaximized = false;
-
+  let w100Element = document.getElementById("readmeCon");
   maxButton.addEventListener("click", () => {
     const timelineSection = document.querySelector("section.timeline");
+    if (!maxiArray[index]) {
+      timelineSection.style.display = "none";
+      w100Element.style.marginTop = "100px";
 
-    if (!isMaximized) {
-      timelineSection.style.display = "none"; // 타임라인 섹션 숨기기
-
-      if (w100Element) {
-        originalMarginTop = w100Element.style.marginTop;
-        w100Element.style.marginTop = "0px";
-      }
-
-      readmeContainer.style.position = "fixed";
+      readmeContainer.style.display = "contents";
       readmeContainer.style.top = 0;
-      readmeContainer.style.left = 0;
       readmeContainer.style.width = "100%";
       readmeContainer.style.height = "100%";
-      readmeContainer.style.zIndex = 9999; // 가장 위에 보이도록 z-index 설정
+      readmeContainer.style.zIndex = 50;
 
-      isMaximized = true;
+      maxiArray[index] = true;
     } else {
-      timelineSection.style.display = ""; // 타임라인 섹션 보이기
+      timelineSection.style.display = "";
+      w100Element.style.marginTop = containerTops[index];
 
-      if (w100Element) {
-        w100Element.style.marginTop = originalMarginTop;
-      }
-
-      readmeContainer.style.position = "";
+      readmeContainer.style.display = "";
       readmeContainer.style.top = "";
       readmeContainer.style.left = "";
       readmeContainer.style.width = "";
       readmeContainer.style.height = "";
       readmeContainer.style.zIndex = "";
 
-      isMaximized = false;
+      maxiArray[index] = false;
+      initializeMaximizeButton(newReadmeContainer, index);
     }
   });
 }

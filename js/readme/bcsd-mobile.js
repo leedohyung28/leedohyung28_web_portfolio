@@ -1,6 +1,7 @@
 const bcsdMobile = document.createElement("div");
 bcsdMobile.classList.add("w-100");
-bcsdMobile.style = "margin-top: 400px;";
+bcsdMobile.id = "readmeCon";
+bcsdMobile.style = "margin-top: 600px;";
 bcsdMobile.innerHTML = `
 <div class="toolbar">
 <i class="fa-solid fa-circle ml-2 btn-close" style="color: #FF0000;"></i>

@@ -1,5 +1,6 @@
 const osSimulator = document.createElement("div");
 osSimulator.classList.add("w-100");
+osSimulator.id = "readmeCon";
 osSimulator.style = "margin-top: 100px;";
 osSimulator.innerHTML = `
 <div class="toolbar">

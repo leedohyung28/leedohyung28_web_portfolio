@@ -1571,6 +1571,9 @@ a:hover {
   -o-transition: 0.3s all ease;
   transition: 0.3s all ease;
 }
+.image-wrap-2 .btn-outline-white {
+  min-width: 180px;
+}
 .image-wrap-2 img {
   /* filter: url(filters.svg#grayscale); Firefox 3.5+ */
   filter: gray;
@@ -1692,8 +1695,8 @@ img:hover {
   border-radius: 0.25rem;
   background-color: #fff;
   border: 1px solid #dee2e6;
-  height: 600px;
-  width: auto;
+  height: auto;
+  width: 30vmin;
 }
 
 /* content-style */
@@ -1771,25 +1774,22 @@ img:hover {
 }
 
 .timeline-content h5 {
-  font-size: 1vw;
+  font-size: 1.3em;
   color: #ffffff;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 22px;
-  margin-bottom: 0.1vw;
 }
 
 .timeline-content h6 {
-  font-size: 0.8vw;
-  margin-bottom: 0.1vw;
-  font-weight: 300;
+  font-size: 1.1em;
+  font-weight: 100;
 }
 
 .timeline-content p {
   color: #ffffff;
-  font-size: 0.8vw;
+  font-size: 1em;
   font-weight: 500;
   line-height: 22px;
-  margin-bottom: 0;
 }
 
 .timeline-content i {
@@ -1805,9 +1805,13 @@ img:hover {
 }
 
 .readme-container summary {
-  font-size: 1.5vw;
+  font-size: 1.5em;
   font-weight: 500;
   margin-bottom: 1vw;
+}
+
+.readme-container .form-row {
+  align-items: center;
 }
 
 .readme-border {
@@ -1940,4 +1944,35 @@ img:hover {
 
 .arrow.visible {
   display: block; /* 보이도록 설정 */
+}
+
+.arrow-right {
+  z-index: 50;
+  background-color: white;
+  color: black;
+  position: absolute;
+  right: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  padding: 2px;
+  font-weight: bold;
+}
+
+.arrow-left {
+  z-index: 50;
+  background-color: white;
+  color: black;
+  position: absolute;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding: 2px;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 3em !important;
+}
+
+.nav-sub {
+  font-size: 1em !important;
 }

@@ -1,6 +1,7 @@
 const bcsdGame = document.createElement("div");
 bcsdGame.classList.add("w-100");
-bcsdGame.style = "margin-top: 1070px;";
+bcsdGame.id = "readmeCon";
+bcsdGame.style = "margin-top: 1270px;";
 bcsdGame.innerHTML = `
 <div class="toolbar">
 <i class="fa-solid fa-circle ml-2 btn-close" style="color: #FF0000;"></i>

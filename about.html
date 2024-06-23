@@ -14,7 +14,7 @@
     />
     <link rel="stylesheet" href="fonts/icomoon/style.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/lightgallery.min.css" />
+    <!-- <link rel="stylesheet" href="css/lightgallery.min.css" /> -->
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -33,11 +33,9 @@
         <div class="container-fluid">
           <div class="row align-items-center">
             <div class="col-6 col-xl-4" data-aos="fade-down">
-              <h1 class="mb-0">
-                <a href="index.html" class="text-white h2 mb-0"
-                  >Web Portfolio</a
-                >
-              </h1>
+              <a href="index.html" class="title text-white mb-0"
+                >Web Portfolio</a
+              >
             </div>
             <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
               <nav
@@ -45,48 +43,27 @@
                 role="navigation"
               >
                 <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                  <li class="active"><a href="index.html">Home</a></li>
-                  <li class="has-children">
-                    <a>Other Projects</a>
-                    <ul class="dropdown">
-                      <li class="has-children">
-                        <a href="#">Scheduling Algorithm GUI (Python)</a>
-                        <ul class="dropdown">
-                          <li>
-                            <a
-                              href="https://github.com/leedohyung28/OS-Scheduling-Algorithm-TeamProject/releases/tag/OS-Scheduling"
-                              >Releases</a
-                            >
-                          </li>
-                          <li>
-                            <a
-                              href="https://github.com/leedohyung28/OS-Scheduling-Algorithm-TeamProject"
-                              >GitHub</a
-                            >
-                          </li>
-                        </ul>
-                      </li>
-
-                      <li>
-                        <a href="https://github.com/leedohyung28/Yupki"
-                          >Yupdduk Menu (C++)</a
-                        >
-                      </li>
-
-                      <li>
-                        <a href="https://github.com/leedohyung28/BCSD_Game/"
-                          >Game Imitate (Imcompleted, Unity, C#)</a
-                        >
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a href="about.html">ABOUT ME</a></li>
-                  <li><a href="https://github.com/leedohyung28">GITHUB</a></li>
+                  <li><a class="nav-sub" href="index.html">HOME</a></li>
                   <li>
-                    <a href="https://velog.io/@leedohyung28/series">VELOG</a>
+                    <a class="nav-sub" href="projects.html">PROJECTS</a>
+                  </li>
+                  <li class="active"><a class="nav-sub" href="about.html">ABOUT ME</a></li>
+                  <li>
+                    <a class="nav-sub" href="https://github.com/leedohyung28"
+                      >GITHUB</a
+                    >
                   </li>
                   <li>
-                    <a href="https://medium.com/@dhleee0123">MEDIUM</a>
+                    <a
+                      class="nav-sub"
+                      href="https://velog.io/@leedohyung28/series"
+                      >VELOG</a
+                    >
+                  </li>
+                  <li>
+                    <a class="nav-sub" href="https://medium.com/@dhleee0123"
+                      >MEDIUM</a
+                    >
                   </li>
                 </ul>
               </nav>
@@ -121,7 +98,7 @@
           </div>
 
           <div class="row mb-5">
-            <div class="col-md-5 ml-auto">
+            <div class="col-md-5 ml-auto text-right">
               <img
                 src="images/profile_about.jpg"
                 alt="Images"
@@ -130,7 +107,7 @@
             </div>
             <div class="col-md-5 mr-auto">
               <h2 class="text-white">이도형 LEE DOHYUNG</h2>
-              <p>한국기술교육대학교 컴퓨터공학부 2018.03 ~</p>
+              <p>한국기술교육대학교 컴퓨터공학부 2018.03 ~ 2024.08</p>
               <p>울산제일고등학교 2014.03 ~ 2017.02</p>
               <h5 class="text-white">
                 경청하고 실천하는 웹 기반 육각형 개발자
@@ -185,9 +162,9 @@
                 alt="Image"
                 class="img-fluid w-50 rounded-circle mb-4"
               />
-              <h2 class="text-white font-weight-light mb-4">기술 스택</h2>
+              <h4 class="text-white font-weight-light mb-4">기술 스택</h4>
               <p class="mb-4">
-                🌕🌕🌕🌕🌕 : HTML5, CSS3, JavaScript, Python, Node.js, MariaDB, Express<br />🌕🌕🌕🌕🌑 :
+                🌕🌕🌕🌕🌕 : HTML5, CSS3, JavaScript, Python<br />🌕🌕🌕🌕🌑 :
                 C#, C++, Dart<br />
                 🌕🌕🌕🌑🌑 : Kotlin, PHP<br />
                 🌕🌕🌑🌑🌑 : Java<br />
@@ -200,7 +177,7 @@
                 alt="Image"
                 class="img-fluid w-50 rounded-circle mb-4"
               />
-              <h2 class="text-white font-weight-light mb-4">자격증</h2>
+              <h4 class="text-white font-weight-light mb-4">자격증</h4>
               <p class="mb-4">
                 정보처리기사<br />
                 토익 930, OPIc IM2<br />
@@ -214,9 +191,9 @@
                 alt="Image"
                 class="img-fluid w-50 rounded-circle mb-4"
               />
-              <h2 class="text-white font-weight-light mb-4">
+              <h4 class="text-white font-weight-light mb-4">
                 교육 / 수상 이력
-              </h2>
+              </h4>
               <p class="mb-4">
                 MS Power BI Hackathon - 2.Platz (2등)<br /><br />
                 웹 풀 스택 교육 (프로그래머스 데브코스) 2024.04 ~
