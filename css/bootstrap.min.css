@@ -73,11 +73,9 @@ section {
 
 body {
   margin: 0;
-  font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
-    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  font-size: 1rem;
+  font-family: "IBM Plex Sans KR", sans-serif;
   font-weight: 400;
+  font-style: normal;
   line-height: 1.5;
   color: #212529;
   text-align: left;
@@ -401,32 +399,37 @@ h6,
 
 h1,
 .h1 {
-  font-size: 2.5rem;
+  font-size: 3.5em;
 }
 
 h2,
 .h2 {
-  font-size: 2rem;
+  font-size: 3em;
 }
 
 h3,
 .h3 {
-  font-size: 1.75rem;
+  font-size: 2.5em;
 }
 
 h4,
 .h4 {
-  font-size: 1.5rem;
+  font-size: 2em;
 }
 
 h5,
 .h5 {
-  font-size: 1.25rem;
+  font-size: 1.5em;
 }
 
 h6,
 .h6 {
-  font-size: 1rem;
+  font-size: 1em;
+}
+
+p,
+.p {
+  font-size: 1em;
 }
 
 .lead {
@@ -518,26 +521,6 @@ mark,
   height: auto;
 }
 
-.img-profile {
-  -webkit-filter: none;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  max-width: 80%;
-  height: auto;
-}
-
-.img-about {
-  -webkit-filter: none;
-  padding: 0.25rem;
-  border-radius: 0.25rem;
-  background-color: #fff;
-  border: 1px solid #dee2e6;
-  height: 600px;
-  width: auto;
-}
-
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
@@ -545,10 +528,6 @@ mark,
   border-radius: 0.25rem;
   max-width: 100%;
   height: auto;
-}
-
-.profile {
-  color: #fff;
 }
 
 .figure {
@@ -7955,12 +7934,24 @@ button.bg-dark:focus {
   width: 25% !important;
 }
 
+.w-40 {
+  width: 40% !important;
+}
+
+.w-45 {
+  width: 46% !important;
+}
+
 .w-50 {
   width: 50% !important;
 }
 
 .w-75 {
   width: 75% !important;
+}
+
+.w-80 {
+  width: 80% !important;
 }
 
 .w-100 {
