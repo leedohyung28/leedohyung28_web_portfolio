@@ -14,8 +14,8 @@ osSimulator.innerHTML = `
     <p class="text-center mt-0">멀티코어로 동작시키는 프로그램</p>
 
     <hr style="border: 1px solid white; width: 100%;">
-    <a href="https://github.com/leedohyung28/OS-Scheduling-Algorithm-TeamProject"><p>Simulator Release File</p></a>
-    <a href="https://github.com/leedohyung28/OS-Scheduling-Algorithm-TeamProject/releases"><p>GitHub Readme</p></a>
+    <a href="https://github.com/leedohyung28/OS-Scheduling-Algorithm-TeamProject/releases"><p>Simulator Release File</p></a>
+    <a href="https://github.com/leedohyung28/OS-Scheduling-Algorithm-TeamProject"><p>GitHub Readme</p></a>
 
     <hr style="border: 1px solid white; width: 100%;">
     <details>
