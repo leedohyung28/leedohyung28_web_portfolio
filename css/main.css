@@ -1,0 +1,14 @@
+@-webkit-keyframes moveToLeft {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  to {
+    -webkit-transform: translateX(-35vw);
+    transform: translateX(-35vw);
+  }
+}
+
+.transition-left {
+  -webkit-animation: moveToLeft 2s forwards;
+}

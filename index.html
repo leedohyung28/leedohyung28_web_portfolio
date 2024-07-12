@@ -24,12 +24,14 @@
     />
     <link rel="stylesheet" href="fonts/icomoon/style.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <!-- <link rel="stylesheet" href="css/lightgallery.min.css" /> -->
-    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/aos.css" />
+    <link rel="stylesheet" href="css/scroll.css" />
   </head>
-  <body>
+  <body style="overflow: hidden">
     <div class="site-wrap">
+      <div class="right-side"></div>
       <div class="site-mobile-menu">
         <div class="site-mobile-menu-header">
           <div class="site-mobile-menu-close mt-3">
@@ -42,12 +44,12 @@
       <header class="site-navbar py-3" role="banner">
         <div class="container-fluid">
           <div class="row align-items-center">
-            <div class="col-6 col-xl-4" data-aos="fade-down">
-              <a href="index.html" class="title text-white mb-0"
-                >Web Portfolio</a
+            <div class="col-6 col-xl-4 text-right">
+              <a href="index.html" class="title mb-0"
+                >leedohyung28's portfolio</a
               >
             </div>
-            <div class="col-10 col-md-8 d-none d-xl-block" data-aos="fade-down">
+            <div class="col-10 col-md-8 d-none d-xl-block">
               <nav
                 class="site-navigation position-relative text-right text-lg-center"
                 role="navigation"
@@ -57,31 +59,16 @@
                     <a class="nav-sub" href="index.html">HOME</a>
                   </li>
                   <li>
+                    <a class="nav-sub" href="timeline.html">TIMELINE</a>
+                  </li>
+                  <li>
                     <a class="nav-sub" href="projects.html">PROJECTS</a>
-                  </li>
-                  <li><a class="nav-sub" href="about.html">ABOUT ME</a></li>
-                  <li>
-                    <a class="nav-sub" href="https://github.com/leedohyung28"
-                      >GITHUB</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      class="nav-sub"
-                      href="https://velog.io/@leedohyung28/series"
-                      >VELOG</a
-                    >
-                  </li>
-                  <li>
-                    <a class="nav-sub" href="https://medium.com/@dhleee0123"
-                      >MEDIUM</a
-                    >
                   </li>
                 </ul>
               </nav>
             </div>
 
-            <div class="col-6 col-xl-2 text-right" data-aos="fade-down">
+            <div class="col-6 col-xl-2 text-right">
               <div
                 class="d-inline-block d-xl-none ml-md-0 mr-auto py-3"
                 style="position: relative; top: 3px"
@@ -95,253 +82,103 @@
         </div>
       </header>
 
-      <div class="container-fluid" data-aos="fade" data-aos-delay="500">
-        <div class="text-white form-row justify-content-center">
-          <img src="images/profile_image.jpg" class="img-profile" />
-          <div class="ml-3 align-content-center">
-            <h2 class="mt-2">이도형</h2>
-            <h4>LEE DOHYUNG</h4>
-            <h5 class="mb-1">경청하고 실천하는 웹 기반 육각형 개발자</h5>
-            <h5>Listening and Acting Web Developer</h5>
+      <div class="container-fluid">
+        <div class="form-row justify-content-center w-100 position-absolute">
+          <h5 class="mt-2 text-white" id="korean-index-main"></h5>
+        </div>
+        <div class="w-100 position-absolute text-main show">
+          <h4 class="text-right mr-5" style="font-weight: bold">
+            Strong (Used in Project)
+          </h4>
+          <h4 class="text-right text-black mr-5">
+            <i class="devicon-html5-plain-wordmark"></i>
+            <i class="devicon-css3-plain-wordmark"></i>
+            <i class="devicon-javascript-plain"></i>
+            <i class="devicon-typescript-plain"></i>
+            <i class="devicon-react-original-wordmark"></i>
+            <i class="devicon-dart-plain"></i>
+            <i class="devicon-flutter-plain"></i>
+            <i class="devicon-php-plain"></i>
+          </h4>
+          <h4 class="text-right text-black mr-5">
+            <i class="devicon-nodejs-plain-wordmark"></i>
+            <i class="devicon-express-original-wordmark"></i>
+            <i class="devicon-firebase-plain-wordmark"></i>
+            <i class="devicon-python-plain-wordmark"></i>
+            <i class="devicon-cplusplus-plain"></i>
+            <i class="devicon-nodemon-plain"></i>
+            <i class="devicon-mysql-plain-wordmark"></i>
+            <i class="devicon-mariadb-original-wordmark"></i>
+          </h4>
+          <h4 class="text-right text-black mr-5">
+            <i class="devicon-netlify-plain-wordmark"></i>
+            <i class="devicon-postman-plain-wordmark"></i>
+            <i class="devicon-linux-plain"></i>
+            <i class="devicon-nuget-original-wordmark"></i>
+          </h4>
+          <h4 class="text-right mr-5 mt-5" style="font-weight: bold">
+            Knowledge
+          </h4>
+          <h4 class="text-right text-black mr-5">
+            <i class="devicon-jquery-plain-wordmark"></i>
+            <i class="devicon-vuejs-plain-wordmark"></i>
+            <i class="devicon-redux-original"></i>
+            <i class="devicon-babel-plain"></i>
+          </h4>
+          <h4 class="text-right text-black mr-5">
+            <i class="devicon-nextjs-original-wordmark"></i>
+            <i class="devicon-c-plain"></i>
+            <i class="devicon-java-plain-wordmark"></i>
+            <i class="devicon-go-original-wordmark"></i>
+            <i class="devicon-rust-original"></i>
+          </h4>
+          <h4 class="text-right text-black mr-5">
+            <i class="devicon-amazonwebservices-plain-wordmark"></i>
+            <i class="devicon-jira-plain-wordmark"></i>
+            <i class="devicon-trello-plain-wordmark"></i>
+            <i class="devicon-figma-plain"></i>
+          </h4>
+        </div>
+
+        <div class="text-center w-100 position-absolute pr-4 show">
+          <div class="image-container">
+            <div class="image-flip">
+              <img class="front mt-5 show" src="./images/profile_circle.png" />
+              <img class="back mt-5 show" src="./images/contact_circle.png" />
+            </div>
           </div>
         </div>
-        <div class="form-row justify-content-center">
-          <div class="arrow" id="left-arrow-container"></div>
-          <div class="col-9 text-white">
-            <section class="timeline">
-              <div class="timeline-containers">
-                <div class="timeline-box">
-                  <div class="timeline-content">
-                    <p>1999.02.02</p>
-                    <h5>울산광역시 출생</h5>
-                    <h6>Born in Ulsan, S.Korea</h6>
-                  </div>
-                </div>
-
-                <div class="timeline-box">
-                  <div class="timeline-content">
-                    <p>2014.03 ~ 2017.02</p>
-                    <h5>울산제일고등학교 졸업</h5>
-                    <h6>Graduated from Ulsan Jeil High School</h6>
-                  </div>
-                </div>
-
-                <div class="timeline-box">
-                  <div class="timeline-content">
-                    <p>2018.03</p>
-                    <h5>한국기술교육대학교 컴퓨터공학부 입학</h5>
-                    <h6>Admission to KOREATECH, Compute Science Engineering</h6>
-                  </div>
-                </div>
-
-                <div class="timeline-box mb-0">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-year">2022</div>
-                  <div
-                    class="timeline-content w-45 position-absolute content-project"
-                  >
-                    <p>2022.03 ~ 2022.05</p>
-                    <h5>운영체제 시뮬레이터 팀 프로젝트</h5>
-                    <h6>OS Process Simulator Team Project</h6>
-                    <i class="devicon-python-plain"></i>
-                  </div>
-                </div>
-
-                <div class="timeline-box pr-0 w-45">
-                  <div
-                    class="timeline-content content-study"
-                    style="height: 300px"
-                  >
-                    <p>2022.03 ~ 2022.08</p>
-                    <h5>BCSD 학습동아리 모바일 부분 스터디</h5>
-                    <h6>BCSD Mobile Study</h6>
-                    <i class="devicon-kotlin-plain"></i>
-                    <i class="devicon-androidstudio-plain"></i>
-                  </div>
-                </div>
-
-                <div class="timeline-box">
-                  <div
-                    class="timeline-content w-45 position-absolute content-extracurri"
-                    style="height: 390px"
-                  >
-                    <p>2022.09 ~ 2023.02</p>
-                    <h5>독일 교환학생 - 알렌대학교</h5>
-                    <h6>Exchange Student to Hochschule Aalen, Germany</h6>
-                    <i class="devicon-java-plain"></i>
-                    <i class="devicon-python-plain"></i>
-                    <i class="devicon-cplusplus-plain"></i>
-                    <i class="devicon-eclipse-plain"></i>
-                  </div>
-                </div>
-
-                <div class="timeline-box pr-0 w-45">
-                  <div class="timeline-content mt-5 content-award">
-                    <p>2022.11.21</p>
-                    <h5>MS Power BI 해커톤 2위</h5>
-                    <h6>MS Power BI Hackathon - 2.Platz</h6>
-                  </div>
-                </div>
-
-                <div class="timeline-box"></div>
-
-                <div class="timeline-box"></div>
-
-                <div class="timeline-box"></div>
-
-                <div class="timeline-box">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-year">2023</div>
-                  <div
-                    class="timeline-content w-45 position-absolute content-study mt-3"
-                  >
-                    <p>2023.03 ~ 2023.07</p>
-                    <h5>BCSD 학습동아리 게임 부분 스터디</h5>
-                    <h6>BCSD Game Study</h6>
-                    <i class="devicon-csharp-plain-wordmark"></i>
-                    <i class="devicon-unity-plain"></i>
-                  </div>
-                </div>
-
-                <div class="timeline-box">
-                  <div
-                    class="timeline-content w-45 position-absolute content-extracurri"
-                    style="height: 600px"
-                  >
-                    <p>2023.04 ~ 2023.12</p>
-                    <h5>Anythink (스타트업) 참여</h5>
-                    <h6>Participate in startup Anythink</h6>
-                    <i class="devicon-dart-plain"></i>
-                    <i class="devicon-flutter-plain"></i>
-                    <i class="devicon-firebase-plain"></i>
-                    <i class="devicon-notion-plain"></i>
-                    <i class="devicon-github-original"></i>
-                  </div>
-                </div>
-
-                <div class="timeline-box pr-0 w-45" style="margin-top: 9.5rem">
-                  <div class="timeline-content content-award">
-                    <p>2023.06.09</p>
-                    <h5>정보처리기사 취득</h5>
-                    <h6>
-                      Obtain Engineer Information Processing Certification
-                    </h6>
-                  </div>
-                </div>
-
-                <div class="timeline-box"></div>
-
-                <div class="timeline-box pr-0 w-45">
-                  <div class="timeline-content content-extracurri">
-                    <p>2023.07.03 ~ 07.28</p>
-                    <h5>(주)하나비전테크 현장실습</h5>
-                    <h6>Field train in HANA VISION TECH Co., Ltd.</h6>
-                    <i class="devicon-python-plain"></i>
-                    <i class="devicon-pytorch-original"></i>
-                    <i class="devicon-opencv-plain"></i>
-                  </div>
-                </div>
-
-                <div class="timeline-box">
-                  <div
-                    class="timeline-content w-45 position-absolute content-project"
-                    style="margin-top: 7rem; height: 650px"
-                  >
-                    <p>2023.11 ~ 2024.05</p>
-                    <h5>딥러닝을 이용한 도로 상태 분석 시스템</h5>
-                    <h6>Road analysis system using Deep Learning</h6>
-                    <i class="devicon-python-plain"></i>
-                    <i class="devicon-pytorch-original"></i>
-                    <i class="devicon-opencv-plain"></i>
-                    <i class="devicon-dart-plain"></i>
-                    <i class="devicon-flutter-plain"></i>
-                    <i class="devicon-firebase-plain"></i>
-                    <i class="devicon-ubuntu-plain-wordmark"></i>
-                    <i class="devicon-amazonwebservices-plain-wordmark"></i>
-                  </div>
-                </div>
-
-                <div class="timeline-box pr-0 w-45">
-                  <div class="timeline-content content-project">
-                    <p>2023.10 ~ 2023.12</p>
-                    <h5>KOREATECHOUR 팀 프로젝트</h5>
-                    <h6>KOREATECHOUR Team Project</h6>
-                    <i class="devicon-csharp-plain"></i>
-                    <i class="devicon-mysql-plain-wordmark"></i>
-                    <i class="devicon-nuget-original"></i>
-                  </div>
-                </div>
-
-                <div class="timeline-box"></div>
-
-                <div class="timeline-box pr-0 w-45">
-                  <div class="timeline-content content-project">
-                    <p>2023.12</p>
-                    <h5>PLAYBALL 학기 프로젝트</h5>
-                    <h6>PLAYBALL Term Project</h6>
-                    <i class="devicon-dart-plain"></i>
-                    <i class="devicon-flutter-plain"></i>
-                  </div>
-                </div>
-
-                <div class="timeline-box"></div>
-
-                <div class="timeline-box mb-0">
-                  <div class="timeline-dot"></div>
-                  <div class="timeline-year">2024</div>
-                </div>
-
-                <div class="timeline-box"></div>
-
-                <div class="timeline-box pr-0 w-45">
-                  <div class="timeline-content content-project">
-                    <p>2024.01 ~ 2024.02</p>
-                    <h5>인스타그램 이름 생성기 홈페이지</h5>
-                    <h6>Instagram Name Generator</h6>
-                    <i class="devicon-html5-plain-wordmark"></i>
-                    <i class="devicon-css3-plain-wordmark"></i>
-                    <i class="devicon-javascript-plain"></i>
-                    <i class="devicon-nodejs-plain-wordmark"></i>
-                    <i class="devicon-nodemon-plain"></i>
-                    <i class="devicon-netlify-plain"></i>
-                  </div>
-                </div>
-
-                <div class="timeline-box"></div>
-
-                <div class="timeline-box" style="height: 320px">
-                  <div
-                    class="timeline-content w-45 position-absolute content-study"
-                    style="height: 320px"
-                  >
-                    <p>2024.04 ~ 2024.10</p>
-                    <h5>웹 풀스택 데브 코스 수강</h5>
-                    <h6>Take a Web Fullstack Dev Course</h6>
-                    <i class="devicon-html5-plain-wordmark"></i>
-                    <i class="devicon-css3-plain-wordmark"></i>
-                    <i class="devicon-javascript-plain"></i>
-                    <i class="devicon-nodejs-plain-wordmark"></i>
-                    <i class="devicon-react-original"></i>
-                    <i class="devicon-typescript-plain"></i>
-                    <i class="devicon-docker-plain-wordmark"></i>
-                    <i class="devicon-azuresqldatabase-plain"></i>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-          <div class="arrow" id="right-arrow-container"></div>
-        </div>
-      </div>
-
-      <div class="footer py-4">
-        <div class="container-fluid text-center">
-          <p>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            leedohyung | Template designed by
-            <a href="https://colorlib.com" target="_blank">Colorlib</a>
-            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-          </p>
+        <div
+          class="show position-absolute ml-5 text-white"
+          style="margin-top: 10vw"
+        >
+          <h6
+            class="text-white ml-5 position-absolute"
+            style="margin-top: 10vw"
+          >
+            <h4 class="mb-3" style="font-weight: bold">
+              <a
+                class="main-icon"
+                href="https://www.notion.so/62f2a117c11245798c7854a5f7bfdcac?pvs=4"
+                >Resume</a
+              >
+            </h4>
+            <a class="mr-5 h2 main-icon" href="https://github.com/leedohyung28"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a
+              class="main-icon mr-5 h2"
+              href="https://velog.io/@leedohyung28/series"
+              ><i class="fa-brands fa-vimeo-v"></i
+            ></a>
+            <a class="main-icon h2" href="https://medium.com/@dhleee0123"
+              ><i class="fa-brands fa-medium"></i></a
+            ><br /><br /><br />
+            한국기술교육대학교 컴퓨터공학부 졸업예정<br /><br />
+            울산제일고등학교 졸업<br /><br />
+            프로그래머스 웹 풀 사이클 교육 2024.04 ~ <br /><br />
+            네이버부스트 모바일 캠프 2024.06 ~ 2024.07
+          </h6>
         </div>
       </div>
     </div>
@@ -349,24 +186,15 @@
       src="https://kit.fontawesome.com/7d83f24941.js"
       crossorigin="anonymous"
     ></script>
-    <script src="js/readme/os-process-simulator.js"></script>
-    <script src="js/readme/bcsd-mobile.js"></script>
-    <script src="js/readme/bcsd-game.js"></script>
-    <script src="js/readme/powerbi-award.js"></script>
-    <script src="js/readme/germany-exchange.js"></script>
-    <script src="js/readme/eip-certification.js"></script>
-    <script src="js/readme/anythink.js"></script>
-    <script src="js/readme/hana-field.js"></script>
-    <script src="js/readme/koreatechour.js"></script>
-    <script src="js/readme/playball.js"></script>
-    <script src="js/readme/road-analysis.js"></script>
-    <script src="js/readme/insta-generator.js"></script>
-    <script src="js/readme/web-fullstack.js"></script>
-    <script src="js/readme.js"></script>
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
+    <script src="js/typeit.js"></script>
+    <script src="js/main-ind.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/aos.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/aos.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

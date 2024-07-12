@@ -1,0 +1,59 @@
+.scroll-container {
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.scroll-content {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+.scroll-content::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+.scroll-content::-webkit-scrollbar-thumb {
+  background: #f7f4eb;
+  border-radius: 20px;
+}
+
+.scroll-content::-webkit-scrollbar-track {
+  background: hsla(0, 0%, 82%, 0.5);
+}
+
+.scroll-content .col-lg-4 {
+  flex: 0 0 auto;
+  width: 33.3333%;
+  transition: opacity 500ms, transform 500ms;
+}
+
+.scroll-content .col-lg-4[data-scroll="out"] {
+  opacity: 0;
+  transform: translateY(150px) scale(0.4);
+}
+
+.scroll-content .col-lg-4[data-scroll="in"] {
+  opacity: 1;
+  transform: translateY(0px) scale(1);
+}
+
+header {
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+header.visible {
+  opacity: 1;
+}
+
+.scroll-container {
+  opacity: 0;
+  transition: opacity 1.5s;
+}
+
+.scroll-container.visible {
+  opacity: 1;
+}

@@ -159,6 +159,14 @@ strong {
   font-weight: bolder;
 }
 
+.bolder {
+  font-weight: bolder;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 small {
   font-size: 80%;
 }
@@ -425,6 +433,14 @@ h5,
 h6,
 .h6 {
   font-size: 1em;
+}
+
+.h7 {
+  font-size: 0.8em;
+}
+
+.h8 {
+  font-size: 0.5em;
 }
 
 p,
@@ -7932,6 +7948,10 @@ button.bg-dark:focus {
 
 .w-25 {
   width: 25% !important;
+}
+
+.w-30 {
+  width: 30% !important;
 }
 
 .w-40 {
