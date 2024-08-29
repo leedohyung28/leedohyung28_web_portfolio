@@ -7,6 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     5: exchangeGermany,
     8: anythink,
     11: roadAnalysis,
+    16: naverboostcamp,
+    17: smartday,
+    18: mygoodprice,
   };
 
   const leftReadmeContainers = {
@@ -33,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       readmeContainer.classList.add("col-3");
 
       nonContents = [0, 1, 2];
-      rightContents = [3, 5, 8, 11];
+      rightContents = [3, 5, 8, 11, 16, 17, 18];
       if (nonContents.includes(index) || arrowArray[index]) {
       } else if (rightContents.includes(index)) {
         readmeContainer.classList.add("readme-right");
@@ -108,6 +111,9 @@ const arrayTops = {
   13: "2460px",
   14: "2820px",
   15: "3150px",
+  16: "3050px",
+  17: "3200px",
+  18: "3450px",
 };
 const containerTops = {
   3: "100px",
@@ -123,6 +129,9 @@ const containerTops = {
   13: "1950px",
   14: "2350px",
   15: "2900px",
+  16: "2900px",
+  17: "2800px",
+  18: "2800px",
 };
 
 function initializeCloseButton(readmeContainer, index) {

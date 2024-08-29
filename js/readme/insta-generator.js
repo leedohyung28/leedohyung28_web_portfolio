@@ -16,6 +16,7 @@ instaGenerator.innerHTML = `
     <hr style="border: 1px solid white; width: 100%;">
     <a href="https://instanamesuggest.netlify.app/"><p>instanamesuggest.netlify.app - 한국어</p></a>
     <a href="https://ignamegenerator.netlify.app/"><p>ignamegenerator.netlify.app - English</p></a>
+    <a href="https://github.com/leedohyung28/insta_name_suggest"><p>GitHub Readme</p></a>
 
     <hr style="border: 1px solid white; width: 100%;">
     <details>
