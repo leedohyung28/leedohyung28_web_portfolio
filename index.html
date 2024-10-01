@@ -24,28 +24,20 @@
     />
     <link rel="stylesheet" href="fonts/icomoon/style.css" />
     <link rel="stylesheet" href="css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/aos.css" />
     <link rel="stylesheet" href="css/scroll.css" />
+    <link rel="stylesheet" href="css/projects.css" />
   </head>
-  <body style="overflow: hidden">
+  <body style="overflow-x: hidden">
     <div class="site-wrap">
       <div class="right-side"></div>
-      <div class="site-mobile-menu">
-        <div class="site-mobile-menu-header">
-          <div class="site-mobile-menu-close mt-3">
-            <span class="icon-close2 js-menu-toggle"></span>
-          </div>
-        </div>
-        <div class="site-mobile-menu-body"></div>
-      </div>
 
-      <header class="site-navbar py-3" role="banner">
-        <div class="container-fluid">
+      <header class="site-navbar" role="banner">
+        <div class="container-fluid position-fixed header">
           <div class="row align-items-center">
             <div class="col-6 col-xl-4 text-right">
-              <a href="index.html" class="title mb-0"
+              <a id="title" class="title mb-0" style="color: #f2e1a7"
                 >leedohyung28's portfolio</a
               >
             </div>
@@ -55,14 +47,14 @@
                 role="navigation"
               >
                 <ul class="site-menu js-clone-nav mx-auto d-none d-lg-block">
-                  <li class="active">
-                    <a class="nav-sub" href="index.html">HOME</a>
+                  <li>
+                    <a id="home" class="nav-sub">HOME</a>
                   </li>
                   <li>
-                    <a class="nav-sub" href="timeline.html">TIMELINE</a>
+                    <a id="projects" class="nav-sub">PROJECTS</a>
                   </li>
                   <li>
-                    <a class="nav-sub" href="projects.html">PROJECTS</a>
+                    <a id="timeline" class="nav-sub">TIMELINE</a>
                   </li>
                 </ul>
               </nav>
@@ -82,64 +74,74 @@
         </div>
       </header>
 
-      <div class="container-fluid">
-        <div class="form-row justify-content-center w-100 position-absolute">
+      <div class="container-fluid" style="padding-top: 50px">
+        <div class="form-row justify-content-left w-100 position-absolute ml-5">
           <h5 class="mt-2 text-white" id="korean-index-main"></h5>
         </div>
         <div class="w-100 position-absolute text-main show">
           <h4 class="text-right mr-5" style="font-weight: bold">
-            Strong (Used in Project)
+            Life Experiences
+          </h4>
+          <div class="text-right text-black mr-5">
+            울산제일고등학교 졸업
+            <p class="text-right-year">2017.02</p>
+            &emsp;&emsp;&emsp;&emsp;&emsp;<br />
+            한국기술교육대학교 컴퓨터공학부 입학
+            <p class="text-right-year">2018.03</p>
+            &emsp;&emsp;&emsp;&emsp;&emsp;<br />
+            독일 교환학생
+            <p class="text-right-year">2022.09 ~ 2023.02</p>
+            <br />
+            Anythink (헬스케어 앱 스타트업)
+            <p class="text-right-year">2023.04 ~ 2023.12</p>
+            <br />
+            (주)하나비전테크 AI 현장실습
+            <p class="text-right-year">2023.07</p>
+            &emsp;&emsp;&emsp;&emsp;&emsp;<br />
+            네이버부스트캠프 모바일 베이직
+            <p class="text-right-year">2024.06 ~ 2024.07</p>
+            <br />
+            웹 풀 사이클 데브코스
+            <p class="text-right-year">2024.04 ~ 2024.10</p>
+            <br />
+            한국기술교육대학교 졸업예정
+            <p class="text-right-year">2025.02</p>
+            &emsp;&emsp;&emsp;&emsp;&emsp;<br />
+          </div>
+          <h4 class="text-right mr-5 mt-5" style="font-weight: bold">
+            Strong Skills
           </h4>
           <h4 class="text-right text-black mr-5">
+            <i class="devicon-typescript-plain"></i>
+            <i class="devicon-python-plain-wordmark"></i>
+            <i class="devicon-dart-plain"></i>
+            <i class="devicon-php-plain"></i>
+            <i class="devicon-csharp-plain"></i>
+          </h4>
+          <h4 class="text-right text-black mr-5">
+            <i class="devicon-react-original-wordmark"></i>
+            <i class="devicon-redux-original"></i>
             <i class="devicon-html5-plain-wordmark"></i>
             <i class="devicon-css3-plain-wordmark"></i>
-            <i class="devicon-javascript-plain"></i>
-            <i class="devicon-typescript-plain"></i>
-            <i class="devicon-react-original-wordmark"></i>
-            <i class="devicon-dart-plain"></i>
             <i class="devicon-flutter-plain"></i>
-            <i class="devicon-php-plain"></i>
           </h4>
           <h4 class="text-right text-black mr-5">
             <i class="devicon-nodejs-plain-wordmark"></i>
             <i class="devicon-express-original-wordmark"></i>
             <i class="devicon-firebase-plain-wordmark"></i>
             <i class="devicon-nestjs-original"></i>
-            <i class="devicon-python-plain-wordmark"></i>
-            <i class="devicon-cplusplus-plain"></i>
-            <i class="devicon-nodemon-plain"></i>
+          </h4>
+          <h4 class="text-right text-black mr-5">
             <i class="devicon-mysql-plain-wordmark"></i>
             <i class="devicon-mariadb-original-wordmark"></i>
             <i class="devicon-mongodb-plain-wordmark"></i>
-            <i class="devicon-mongoose-original-wordmark"></i>
           </h4>
           <h4 class="text-right text-black mr-5">
-            <i class="devicon-netlify-plain-wordmark"></i>
-            <i class="devicon-postman-plain-wordmark"></i>
-            <i class="devicon-linux-plain"></i>
-            <i class="devicon-nuget-original-wordmark"></i>
-          </h4>
-          <h4 class="text-right mr-5 mt-5" style="font-weight: bold">
-            Knowledge
-          </h4>
-          <h4 class="text-right text-black mr-5">
-            <i class="devicon-jquery-plain-wordmark"></i>
-            <i class="devicon-nextjs-original-wordmark"></i>
-            <i class="devicon-vuejs-plain-wordmark"></i>
-            <i class="devicon-redux-original"></i>
-            <i class="devicon-babel-plain"></i>
-          </h4>
-          <h4 class="text-right text-black mr-5">
-            <i class="devicon-c-plain"></i>
-            <i class="devicon-java-plain-wordmark"></i>
-            <i class="devicon-go-original-wordmark"></i>
-            <i class="devicon-rust-original"></i>
-          </h4>
-          <h4 class="text-right text-black mr-5">
+            <i class="devicon-jest-plain"></i>
+            <i class="devicon-docker-plain-wordmark"></i>
+            <i class="devicon-githubactions-plain"></i>
             <i class="devicon-amazonwebservices-plain-wordmark"></i>
-            <i class="devicon-jira-plain-wordmark"></i>
-            <i class="devicon-trello-plain-wordmark"></i>
-            <i class="devicon-figma-plain"></i>
+            <i class="devicon-kotlin-plain"></i>
           </h4>
         </div>
 
@@ -153,51 +155,840 @@
         </div>
         <div
           class="show position-absolute ml-5 text-white"
-          style="margin-top: 10vw"
+          style="margin-top: 300px; display: grid"
         >
           <h6
             class="text-white ml-5 position-absolute"
             style="margin-top: 10vw"
           >
-            <h4 class="mb-3" style="font-weight: bold">
+            <h4 class="icon-tit mb-3">Channels</h4>
+            <div class="icon-word">
               <a
-                class="main-icon"
-                href="https://www.notion.so/62f2a117c11245798c7854a5f7bfdcac?pvs=4"
-                >Resume</a
-              >
-            </h4>
-            <a class="mr-5 h2 main-icon" href="https://github.com/leedohyung28"
-              ><i class="fab fa-github"></i
-            ></a>
-            <a
-              class="main-icon mr-5 h2"
-              href="https://velog.io/@leedohyung28/series"
-              ><i class="fa-brands fa-vimeo-v"></i
-            ></a>
-            <a class="main-icon h2" href="https://medium.com/@dhleee0123"
-              ><i class="fa-brands fa-medium"></i></a
-            ><br /><br /><br />
-            한국기술교육대학교 컴퓨터공학부 졸업예정<br /><br />
-            울산제일고등학교 졸업<br /><br />
-            프로그래머스 웹 풀 사이클 교육 2024.04 ~ <br /><br />
-            네이버부스트캠프 모바일 베이직 2024.06 ~ 2024.07
+                class="mr-3 h2 main-icon"
+                href="https://github.com/leedohyung28"
+                ><i class="fab fa-github"></i
+              ></a>
+              <h5>GitHub</h5>
+            </div>
+
+            <div class="icon-word">
+              <a href="https://velog.io/@leedohyung28">
+                <a class="main-icon mr-3 h2"
+                  ><i class="fa-brands fa-vimeo-v"></i
+                ></a>
+                <h5>Velog</h5>
+              </a>
+            </div>
+
+            <div class="icon-word">
+              <a class="main-icon mr-3 h2" href="https://medium.com/@dhleee0123"
+                ><i class="fa-brands fa-medium"></i
+              ></a>
+              <h5>Medium</h5>
+            </div>
           </h6>
         </div>
       </div>
+
+      <div class="projects">
+        <h1 class="text-center text-white mb-5 pt-5">Projects</h1>
+        <div class="container-fluid">
+          <div class="scroll-container">
+            <div class="scroll-content">
+              <div class="col-lg-4">
+                <div class="image-wrap-2">
+                  <div class="image-info">
+                    <h5 class="mb-3 text-white">My Good Price</h5>
+                    <h6 class="hover-hide-text">
+                      주변에 착한 가게를 검색하고 관리하며
+                    </h6>
+                    <h6 class="hover-hide-text">
+                      사용자의 소비 패턴을 분석하는 웹 애플리케이션
+                    </h6>
+                    <a
+                      href="https://mygoodprice-programmersteamproject.netlify.app"
+                      class="btn btn-outline-white py-2 px-4 mb-2"
+                      >Homepage</a
+                    >
+                    <a
+                      href="https://github.com/leedohyung28/MyGoodPrice-BE"
+                      class="btn btn-outline-white py-2 px-4 mb-2"
+                      >GitHub</a
+                    >
+                    <h6 class="hover-hide-text">
+                      React, TypeScript, TailwindCSS
+                    </h6>
+                    <h6 class="hover-hide-text">NestJS, MongoDB, Firebase</h6>
+                    <p class="text-white">24.08, 4인 팀 프로젝트</p>
+
+                    <div class="text-left txt-role mt-2 mb-2">
+                      <div class="text-white">Roles : 백엔드 담당</div>
+                      <div class="text-white">• MongoDB DBMS 구축</div>
+                      <div class="text-white">
+                        • API 개발 및 Axios 통한 DB와 연동
+                      </div>
+                      <div class="text-white">
+                        • Firebase를 도입해 사용자 인증 구현
+                      </div>
+                    </div>
+                    <div class="text-right txt-tech mt-2">
+                      <div class="text-white">Techs :</div>
+                      <div class="text-white">
+                        • NestJS의 Module 간
+                        <a
+                          href="https://velog.io/@leedohyung28/NestJS%EC%97%90%EC%84%9C-forwardRef%EB%A5%BC-%ED%86%B5%ED%95%B4-%EC%88%9C%ED%99%98-%EC%A2%85%EC%86%8D%EC%84%B1-Module-%EA%B0%84-import-%EB%AC%B8%EC%A0%9C-%ED%95%B4%EA%B2%B0"
+                          >순환 의존성 문제</a
+                        >
+                        해결
+                      </div>
+
+                      <div class="text-white">
+                        • Geocoding을 통한 위치 기반 가게 정보 제공
+                      </div>
+                      <div class="text-white">
+                        • Chart.js를 통한 막대/원형 그래프 시각화
+                      </div>
+                    </div>
+
+                    <h5></h5>
+                  </div>
+                  <img src="images/mgp.jpg" alt="Image" class="img-fluid" />
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="image-wrap-2">
+                  <div class="image-info">
+                    <h5 class="mb-3 text-white">SMART DAY</h5>
+                    <h6 class="hover-hide-text">일상의 효율을 높여주기 위해</h6>
+                    <h6 class="hover-hide-text">
+                      Schedule과 Todolist를 관리할 수 있는
+                    </h6>
+                    <h6 class="hover-hide-text">웹 애플리케이션</h6>
+                    <a
+                      href="https://wonseungteamproject-smartday.netlify.app"
+                      class="btn btn-outline-white py-2 px-4 mb-2"
+                      >Homepage</a
+                    >
+                    <a
+                      href="https://github.com/leedohyung28/smart-day"
+                      class="btn btn-outline-white py-2 px-4 mb-2"
+                      >GitHub</a
+                    >
+                    <h6 class="hover-hide-text">React, TypeScript, Zustand</h6>
+                    <h6 class="hover-hide-text">Node.js, MariaDB, MySQL</h6>
+                    <p class="text-white">24.06 ~ 24.07, 6인 팀 프로젝트</p>
+
+                    <div class="text-left txt-role mt-2 mb-2">
+                      <div class="text-white">Roles : 프론트엔드 담당</div>
+                      <div class="text-white">• UI/UX 설계</div>
+                      <div class="text-white">
+                        • Axios 통한 API 비동기적 연결 처리
+                      </div>
+                    </div>
+                    <div class="text-right txt-tech mt-2">
+                      <div class="text-white">Techs :</div>
+                      <div class="text-white">
+                        • Zustand 전역 데이터를 활용해 서버 부하 감소
+                      </div>
+                      <div class="text-white">
+                        •
+                        <a
+                          href="https://velog.io/@leedohyung28/TypeScript-%ED%8E%98%EC%9D%B4%EC%A7%80%EA%B0%80-%EB%A0%8C%EB%8D%94%EB%A7%81%EB%90%A0-%EB%95%8C-%EB%B6%88%ED%95%84%EC%9A%94%ED%95%9C-useEffect-%EB%B0%A9%EC%A7%80"
+                          >useRef</a
+                        >를 통해 API 호출 50% 이상 효율 개선
+                      </div>
+                      <div class="text-white">
+                        • Open API 활용해 단기 예보 날씨 정보 활용
+                      </div>
+                    </div>
+                  </div>
+                  <img src="images/sd.jpg" alt="Image" class="img-fluid" />
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="image-wrap-2">
+                  <div class="image-info">
+                    <h5 class="mb-3 text-white">Instagram Name Generator</h5>
+                    <h6 class="hover-hide-text">인스타그램과 같은 SNS에서</h6>
+                    <h6 class="hover-hide-text">
+                      닉네임을 정하기 힘들어하는 사람들을 위해
+                    </h6>
+                    <h6 class="hover-hide-text">추천/제작해주는 웹 사이트</h6>
+                    <a
+                      href="https://instanamesuggest.netlify.app/"
+                      class="btn btn-outline-white py-2 px-4 mb-2"
+                      >Korean Ver.</a
+                    >
+                    <a
+                      href="https://ignamegenerator.netlify.app/"
+                      class="btn btn-outline-white py-2 px-4 mb-2"
+                      >English Ver.</a
+                    >
+                    <h6 class="hover-hide-text">HTML, CSS, JavaScript</h6>
+                    <h6 class="hover-hide-text">Node.js</h6>
+                    <p class="text-white">24.01 ~ 24.02, 개인 프로젝트</p>
+
+                    <div class="text-right txt-tech mt-2">
+                      <div class="text-white">Techs :</div>
+                      <div class="text-white">
+                        • 직접 배포한
+                        <a
+                          href="https://www.npmjs.com/package/keyboard-korean-converter"
+                          >npm 패키지</a
+                        >를 웹 사이트에 연동
+                      </div>
+                      <div class="text-white">
+                        • 피드백을 통해 DB → 하드 코딩을 통한 속도 30% 개선
+                      </div>
+                      <div class="text-white">
+                        • HTML Image Map을 통해 이미지 반응형 기능 구현
+                      </div>
+                      <div class="text-white">
+                        • DeepL API 사용하여 한글을 영어로 변환
+                      </div>
+                      <div class="text-white">
+                        • SEO 최적화(LightHouse 100점) 및 반응형 디자인
+                      </div>
+                    </div>
+                  </div>
+                  <img src="images/ing.jpg" alt="Image" class="img-fluid" />
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="image-wrap-2">
+                  <div class="image-info">
+                    <h5 class="mb-3 text-white">
+                      Road Hazard Detection System
+                    </h5>
+                    <h6 class="hover-hide-text">
+                      불량 노면으로 인한 교통 사고 방지와
+                    </h6>
+                    <h6 class="hover-hide-text">
+                      불필요한 도로 노면 공사 비용 절약을 위한
+                    </h6>
+                    <h6 class="hover-hide-text">
+                      딥러닝을 이용한 도로 상태 분석 및 신고 시스템
+                    </h6>
+                    <a
+                      href="https://github.com/leedohyung28/road-hazard-detect-system"
+                      class="btn btn-outline-white py-2 px-4 mb-2"
+                      >GitHub</a
+                    >
+                    <h6 class="hover-hide-text">Python, Dart</h6>
+                    <h6 class="hover-hide-text">Firebase</h6>
+                    <p class="text-white">23.11 ~ 24.05, 4인 팀 프로젝트</p>
+
+                    <div class="text-left txt-role mt-2 mb-2">
+                      <div class="text-white">Roles : AI 담당</div>
+                      <div class="text-white">• AI 데이터 수집 및 라벨링</div>
+                      <div class="text-white">
+                        • 딥러닝 이미지 탐지 모델 비교 후 YOLO 모델 선정
+                      </div>
+                      <div class="text-white">
+                        • Jetson Nano로 딥러닝 모델 이식
+                      </div>
+                    </div>
+                    <div class="text-right txt-tech mt-2">
+                      <div class="text-white">Techs :</div>
+                      <div class="text-white">
+                        • 학습 데이터에 Manhole을 추가하여 Pothole 감지 정확도
+                        60% 개선
+                      </div>
+                      <div class="text-white">
+                        • 역지오코딩을 통해 신고 위치 추적 후 자동 신고 시스템
+                        구현
+                      </div>
+                      <div class="text-white">
+                        • 딥러닝 모델 Python 코드 수정을 통한 Inference 속도 30%
+                        개선
+                      </div>
+                      <div class="text-white">
+                        • 라이브러리 다운그레이드를 통해 Linux 기기 이식 이 후
+                        성능 대비 속도 개선
+                      </div>
+                    </div>
+                  </div>
+                  <img src="images/rhs.jpg" alt="Image" class="img-fluid" />
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="image-wrap-2">
+                  <div class="image-info">
+                    <h2 class="mb-3">PLAYBALL</h2>
+                    <h6 class="hover-hide-text">
+                      야구에 대한 사회적 관심을 위해
+                    </h6>
+                    <h6 class="hover-hide-text">
+                      관련 정보 소개 및 티켓 예매 연결을 위한
+                    </h6>
+                    <h6 class="hover-hide-text">웹 애플리케이션</h6>
+                    <a
+                      href="https://leedohyung28.github.io/PlayBall.io/"
+                      class="btn btn-outline-white py-2 px-4 mb-2"
+                      >Homepage</a
+                    >
+                    <a
+                      href="https://github.com/leedohyung28/PlayBall"
+                      class="btn btn-outline-white py-2 px-4 mb-2"
+                      >GitHub</a
+                    >
+                    <h6 class="hover-hide-text">Dart</h6>
+                    <p class="text-white">23.12, 개인 프로젝트</p>
+
+                    <div class="text-right txt-tech mt-2">
+                      <div class="text-white">Techs :</div>
+                      <div class="text-white">
+                        • 웹 앱에 크기에 따른 반응형 디자인 적용
+                      </div>
+                      <div class="text-white">
+                        • pointer_interceptor 패키지를 통해 Youtube 영상 위 버튼
+                        구현
+                      </div>
+                      <div class="text-white">
+                        • youtube-player_iframe을 통해 PC 환경에서 영상 재생
+                        구현
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    src="images/playball.jpg"
+                    alt="Image"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="image-wrap-2">
+                  <div class="image-info">
+                    <h3 class="mb-3 text-white">KOREATECHOUR</h3>
+                    <h6 class="hover-hide-text">교내 학생들의 졸업을 위해</h6>
+                    <h6 class="hover-hide-text">
+                      시간표를 통해 졸업 학점을 계산해주고
+                    </h6>
+                    <h6 class="hover-hide-text">
+                      커뮤니티를 통해 소통이 가능한 프로그램
+                    </h6>
+                    <a
+                      href="https://github.com/leedohyung28/BestWebProgramming/releases"
+                      class="btn btn-outline-white py-2 px-4 mb-2"
+                      >Releases</a
+                    >
+                    <a
+                      href="https://github.com/leedohyung28/BestWebProgramming"
+                      class="btn btn-outline-white py-2 px-4 mb-2"
+                      >GitHub</a
+                    >
+                    <h6>C#, MySQL</h6>
+                    <p class="text-white">23.10 ~ 23.12, 4인 팀 프로젝트</p>
+
+                    <div class="text-left txt-role mt-2 mb-2">
+                      <div class="text-white">Roles : 팀장, UI/UX</div>
+                      <div class="text-white">• 페이지 설계 및 통합</div>
+                      <div class="text-white">• 회원 기능 구현</div>
+                      <div class="text-white">• 사용자 (Usability) 테스트</div>
+                    </div>
+                    <div class="text-right txt-tech mt-2">
+                      <div class="text-white">Techs :</div>
+                      <div class="text-white">
+                        • DB를 활용하여 게시판, 시간표 기능 구현
+                      </div>
+                      <div class="text-white">
+                        • 학년별/학과별 다른 졸업 학점 계산
+                      </div>
+                      <div class="text-white">
+                        • NuGet을 통한 UI 디자인 개선
+                      </div>
+                    </div>
+                  </div>
+                  <img
+                    src="images/graduate.jpg"
+                    alt="Image"
+                    class="img-fluid"
+                  />
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="image-wrap-2">
+                  <div class="image-info">
+                    <h2 class="mb-3">I ❤ Movies</h2>
+                    <h6 class="hover-hide-text">영화 애호가들을 위한</h6>
+                    <h6 class="hover-hide-text">
+                      영화 정보 공유 커뮤니티 웹 사이트
+                    </h6>
+                    <a
+                      href="https://github.com/leedohyung28/ILoveMovies"
+                      class="btn btn-outline-white py-2 px-4 mb-4"
+                      >GitHub</a
+                    >
+                    <h6 class="hover-hide-text">PHP, HTML, CSS</h6>
+                    <h6 class="hover-hide-text">Apache, MariaDB</h6>
+                    <p class="text-white">22.05 ~ 22.06, 개인 프로젝트</p>
+                    <div class="text-right txt-tech mt-2">
+                      <div class="text-white">Techs :</div>
+                      <div class="text-white">
+                        • DB를 회원, 게시판 기능 구현
+                      </div>
+                      <div class="text-white">
+                        • 관리자 모드를 통한 게시판/회원 제어 기능 구현
+                      </div>
+                    </div>
+                  </div>
+                  <img src="images/ilm.jpg" alt="Image" class="img-fluid" />
+                </div>
+              </div>
+
+              <div class="col-lg-4">
+                <div class="image-wrap-2">
+                  <div class="image-info">
+                    <h4 class="mb-3 text-white">Scheduler Simulator</h4>
+                    <h6 class="hover-hide-text">
+                      5가지의 스케줄링 알고리즘과 직접 구현한 알고리즘의
+                    </h6>
+                    <h6 class="hover-hide-text">
+                      동작 방식을 시각화하여 보여주는 시뮬레이션 프로그램
+                    </h6>
+                    <a
+                      href="https://github.com/leedohyung28/OS-Scheduling-Algorithm-TeamProject/releases/tag/OS-Scheduling/"
+                      class="btn btn-outline-white py-2 px-4 mb-2"
+                      >Release</a
+                    >
+                    <a
+                      href="https://github.com/leedohyung28/OS-Scheduling-Algorithm-TeamProject"
+                      class="btn btn-outline-white py-2 px-4 mb-2"
+                      >GitHub</a
+                    >
+                    <h6 class="hover-hide-text">Python</h6>
+                    <p class="text-white">22.03 ~ 22.05, 4인 팀 프로젝트</p>
+
+                    <div class="text-left txt-role mt-2 mb-2">
+                      <div class="text-white">Roles : 백엔드 담당</div>
+                      <div class="text-white">
+                        • 스케줄링 알고리즘 구현 및 디버깅
+                      </div>
+                      <div class="text-white">
+                        • 새로운 스케줄링 알고리즘
+                        <a
+                          href="https://github.com/leedohyung28/OS-Scheduling-Algorithm-TeamProject?tab=readme-ov-file#wtq-%EA%B5%AC%ED%98%84-%EB%B0%A9%EB%B2%95-"
+                          >WTQ</a
+                        >
+                        구현
+                      </div>
+                    </div>
+                    <div class="text-right txt-tech mt-2">
+                      <div class="text-white">Techs :</div>
+                      <div class="text-white">
+                        • Python tkinter 통한 프론트엔드 개발
+                      </div>
+                      <div class="text-white">
+                        • 멀티 코어 (P 코어, E 코어) 구현
+                      </div>
+                    </div>
+                  </div>
+                  <img src="images/ops.jpg" alt="Image" class="img-fluid" />
+                </div>
+              </div>
+
+              <!-- <div class="col-lg-4">
+                <div class="image-wrap-2">
+                  <div class="image-info">
+                    <h4 class="mb-3 text-white">BUY BY BOOKS</h4>
+                    <h6>도서 구매 웹 페이지</h6>
+                    <a
+                      href="https://leedohyung28.github.io/BuyByBooks/"
+                      class="btn btn-outline-white py-2 px-4 mb-2"
+                      >Homepage</a
+                    >
+                    <a
+                      href="https://github.com/leedohyung28/BuyByBooks"
+                      class="btn btn-outline-white py-2 px-4 mb-2"
+                      >GitHub</a
+                    >
+                    <h6>HTML, CSS, JavaScript</h6>
+                    <p class="text-white">24.05</p>
+                  </div>
+                  <img src="images/books.jpg" alt="Image" class="img-fluid" />
+                </div>
+              </div> -->
+
+              <!-- <div class="col-lg-4">
+                <div class="image-wrap-2">
+                  <div class="image-info">
+                    <h4 class="mb-3 text-white">Yupdduk Menu</h4>
+                    <h6>엽기떡볶이 메뉴판</h6>
+                    <a
+                      href="https://github.com/leedohyung28/Yupki"
+                      class="btn btn-outline-white py-2 px-4 mb-2"
+                      >GitHub</a
+                    >
+                    <h6>C++</h6>
+                    <p class="text-white">21.06</p>
+                  </div>
+                  <img src="images/ykt.jpg" alt="Image" class="img-fluid" />
+                </div>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <div class="container-fluid bg-img">
+      <h1 class="text-center text-white mb-5 pt-5">Timeline</h1>
+      <div class="form-row justify-content-center">
+        <div class="arrow" id="left-arrow-container"></div>
+        <div class="col-9 text-white">
+          <h1 class="text-center" id="title"></h1>
+          <section class="timeline">
+            <div class="timeline-containers">
+              <div class="timeline-box">
+                <div class="timeline-content">
+                  <p>1999.02.02</p>
+                  <div class="h7 bolder">울산광역시 출생</div>
+                  <div class="h7 mb-2 bold">Born in Ulsan, S.Korea</div>
+                </div>
+              </div>
+
+              <div class="timeline-box">
+                <div class="timeline-content">
+                  <p>2014.03 ~ 2017.02</p>
+                  <div class="h7 bolder">울산제일고등학교 졸업</div>
+                  <div class="h7 mb-2 bold">
+                    Graduated from Ulsan Jeil High School
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-box">
+                <div class="timeline-content">
+                  <p>2018.03</p>
+                  <div class="h7 bolder">
+                    한국기술교육대학교 컴퓨터공학부 입학
+                  </div>
+                  <div class="h7 mb-2 bold">
+                    Admission to KOREATECH, Compute Science Engineering
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-box mb-0">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year timeline-right">2022</div>
+                <div
+                  class="timeline-content w-45 position-absolute content-project"
+                >
+                  <p>2022.03 ~ 2022.05</p>
+                  <div class="h7 bolder">운영체제 시뮬레이터 팀 프로젝트</div>
+                  <div class="h7 mb-2 bold">
+                    OS Process Simulator Team Project
+                  </div>
+                  <i class="devicon-python-plain"></i>
+                </div>
+              </div>
+
+              <div class="timeline-box pr-0 w-45">
+                <div
+                  class="timeline-content content-study"
+                  style="height: 300px"
+                >
+                  <p>2022.03 ~ 2022.08</p>
+                  <div class="h7 bolder">
+                    BCSD 학습동아리 모바일 부분 스터디
+                  </div>
+                  <div class="h7 mb-2 bold">BCSD Mobile Study</div>
+                  <i class="devicon-kotlin-plain"></i>
+                  <i class="devicon-androidstudio-plain"></i>
+                </div>
+              </div>
+
+              <div class="timeline-box">
+                <div
+                  class="timeline-content w-45 position-absolute content-extracurri"
+                  style="height: 390px"
+                >
+                  <p>2022.09 ~ 2023.02</p>
+                  <div class="h7 bolder">독일 교환학생 - 알렌대학교</div>
+                  <div class="h7 mb-2 bold">
+                    Exchange Student to Hochschule Aalen, Germany
+                  </div>
+                  <i class="devicon-java-plain"></i>
+                  <i class="devicon-python-plain"></i>
+                  <i class="devicon-cplusplus-plain"></i>
+                  <i class="devicon-eclipse-plain"></i>
+                </div>
+              </div>
+
+              <div class="timeline-box pr-0 w-45">
+                <div class="timeline-content mt-5 content-award">
+                  <p>2022.11.21</p>
+                  <div class="h7 bolder">MS Power BI 해커톤 2위</div>
+                  <div class="h7 mb-2 bold">
+                    MS Power BI Hackathon - 2.Platz
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-box"></div>
+
+              <div class="timeline-box"></div>
+
+              <div class="timeline-box"></div>
+
+              <div class="timeline-box">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year timeline-left">2023</div>
+                <div
+                  class="timeline-content w-45 position-absolute content-study mt-3"
+                >
+                  <p>2023.03 ~ 2023.07</p>
+                  <div class="h7 bolder">BCSD 학습동아리 게임 부분 스터디</div>
+                  <div class="h7 mb-2 bold">BCSD Game Study</div>
+                  <i class="devicon-csharp-plain-wordmark"></i>
+                  <i class="devicon-unity-plain"></i>
+                </div>
+              </div>
+
+              <div class="timeline-box">
+                <div
+                  class="timeline-content w-45 position-absolute content-extracurri"
+                  style="height: 600px"
+                >
+                  <p>2023.04 ~ 2023.12</p>
+                  <div class="h7 bolder">Anythink (스타트업) 참여</div>
+                  <div class="h7 mb-2 bold">
+                    Participate in startup Anythink
+                  </div>
+                  <i class="devicon-dart-plain"></i>
+                  <i class="devicon-flutter-plain"></i>
+                  <i class="devicon-firebase-plain"></i>
+                  <i class="devicon-notion-plain"></i>
+                  <i class="devicon-github-original"></i>
+                </div>
+              </div>
+
+              <div class="timeline-box pr-0 w-45" style="margin-top: 9.5rem">
+                <div class="timeline-content content-award">
+                  <p>2023.06.09</p>
+                  <div class="h7 bolder">정보처리기사 취득</div>
+                  <div class="h7 mb-2 bold">
+                    Obtain Engineer Information Processing Certification
+                  </div>
+                </div>
+              </div>
+
+              <div class="timeline-box"></div>
+
+              <div class="timeline-box pr-0 w-45">
+                <div class="timeline-content content-extracurri">
+                  <p>2023.07.03 ~ 07.28</p>
+                  <div class="h7 bolder">(주)하나비전테크 현장실습</div>
+                  <div class="h7 mb-2 bold">
+                    Field train in HANA VISION TECH Co., Ltd.
+                  </div>
+                  <i class="devicon-python-plain"></i>
+                  <i class="devicon-pytorch-original"></i>
+                  <i class="devicon-opencv-plain"></i>
+                </div>
+              </div>
+
+              <div class="timeline-box">
+                <div
+                  class="timeline-content w-45 position-absolute content-project"
+                  style="margin-top: 7rem; height: 650px"
+                >
+                  <p>2023.11 ~ 2024.05</p>
+                  <div class="h7 bolder">
+                    딥러닝을 이용한 도로 상태 분석 시스템
+                  </div>
+                  <div class="h7 mb-2 bold">
+                    Road analysis system using Deep Learning
+                  </div>
+                  <i class="devicon-python-plain"></i>
+                  <i class="devicon-pytorch-original"></i>
+                  <i class="devicon-opencv-plain"></i>
+                  <i class="devicon-dart-plain"></i>
+                  <i class="devicon-flutter-plain"></i>
+                  <i class="devicon-firebase-plain"></i>
+                  <i class="devicon-ubuntu-plain-wordmark"></i>
+                  <i class="devicon-amazonwebservices-plain-wordmark"></i>
+                </div>
+              </div>
+
+              <div class="timeline-box pr-0 w-45">
+                <div class="timeline-content content-project">
+                  <p>2023.10 ~ 2023.12</p>
+                  <div class="h7 bolder">KOREATECHOUR 팀 프로젝트</div>
+                  <div class="h7 mb-2 bold">KOREATECHOUR Team Project</div>
+                  <i class="devicon-csharp-plain"></i>
+                  <i class="devicon-mysql-plain-wordmark"></i>
+                  <i class="devicon-nuget-original"></i>
+                </div>
+              </div>
+
+              <div class="timeline-box"></div>
+
+              <div class="timeline-box pr-0 w-45">
+                <div class="timeline-content content-project">
+                  <p>2023.12</p>
+                  <div class="h7 bolder">PLAYBALL 학기 프로젝트</div>
+                  <div class="h7 mb-2 bold">PLAYBALL Term Project</div>
+                  <i class="devicon-dart-plain"></i>
+                  <i class="devicon-flutter-plain"></i>
+                </div>
+              </div>
+
+              <div class="timeline-box"></div>
+
+              <div class="timeline-box mb-0">
+                <div class="timeline-dot"></div>
+                <div class="timeline-year timeline-left">2024</div>
+              </div>
+
+              <div class="timeline-box"></div>
+
+              <div class="timeline-box pr-0 w-45">
+                <div class="timeline-content content-project">
+                  <p>2024.01 ~ 2024.02</p>
+                  <div class="h7 bolder">인스타그램 이름 생성기 홈페이지</div>
+                  <div class="h7 mb-2 bold">Instagram Name Generator</div>
+                  <i class="devicon-html5-plain-wordmark"></i>
+                  <i class="devicon-css3-plain-wordmark"></i>
+                  <i class="devicon-javascript-plain"></i>
+                  <i class="devicon-nodejs-plain-wordmark"></i>
+                  <i class="devicon-nodemon-plain"></i>
+                  <i class="devicon-netlify-plain"></i>
+                </div>
+              </div>
+
+              <div class="timeline-box"></div>
+
+              <div class="timeline-box pr-0 w-45">
+                <div
+                  class="timeline-content position-absolute content-study w-100"
+                  style="height: 600px"
+                >
+                  <p>2024.04 ~ 2024.10</p>
+                  <div class="h7 bolder">웹 풀스택 사이클 데브 코스 수강</div>
+                  <div class="h7 mb-2 bold">Web Fullstack Cycle Dev Course</div>
+                  <i class="devicon-html5-plain-wordmark"></i>
+                  <i class="devicon-css3-plain-wordmark"></i>
+                  <i class="devicon-javascript-plain"></i>
+                  <i class="devicon-nodejs-plain-wordmark"></i>
+                  <i class="devicon-react-original"></i>
+                  <i class="devicon-typescript-plain"></i>
+                  <i class="devicon-docker-plain-wordmark"></i>
+                  <i class="devicon-azuresqldatabase-plain"></i>
+                </div>
+              </div>
+
+              <div class="timeline-box" style="height: 100px">
+                <div
+                  class="timeline-content w-45 position-absolute content-study"
+                  style="height: 160px"
+                >
+                  <p>2024.06 ~ 2024.07</p>
+                  <div class="h7 bolder">네이버부스트캠프 모바일 베이직</div>
+                  <div class="h7 mb-2 bold">Naver Boostcamp Mobile Basic</div>
+                  <i class="devicon-kotlin-plain"></i>
+                  <i class="devicon-intellij-plain"></i>
+                  <i class="devicon-gradle-original"></i>
+                </div>
+              </div>
+
+              <div class="timeline-box"></div>
+
+              <div class="timeline-box" style="height: 100px">
+                <div
+                  class="timeline-content w-45 position-absolute content-project"
+                  style="height: 160px"
+                >
+                  <p>2024.06 ~ 2024.07</p>
+                  <div class="h7 bolder">SMART DAY 팀 프로젝트</div>
+                  <div class="h7 mb-2 bold">SMART DAY Team Project</div>
+                  <i class="devicon-react-original"></i>
+                  <i class="devicon-typescript-plain"></i>
+                  <i class="devicon-vitejs-plain"></i>
+                  <i class="devicon-nodejs-plain-wordmark"></i>
+                  <i class="devicon-express-original-wordmark"></i>
+                  <i class="devicon-mariadb-original-wordmark"></i>
+                  <i class="devicon-mysql-plain-wordmark"></i>
+                  <i class="devicon-axios-plain-wordmark"></i>
+                  <i class="devicon-redux-original"></i>
+                </div>
+              </div>
+
+              <div class="timeline-box"></div>
+
+              <div class="timeline-box" style="height: 200px">
+                <div
+                  class="timeline-content w-45 position-absolute content-project"
+                  style="height: 160px"
+                >
+                  <p>2024.08</p>
+                  <div class="h7 bolder">MyGoodPrice 팀 프로젝트</div>
+                  <div class="h7 mb-2 bold">MyGoodPrice Project</div>
+                  <i class="devicon-nestjs-original"></i>
+                  <i class="devicon-mongodb-plain-wordmark"></i>
+                  <i class="devicon-firebase-plain-wordmark"></i>
+                  <i class="devicon-python-plain"></i>
+                  <i class="devicon-react-original"></i>
+                  <i class="devicon-typescript-plain"></i>
+                  <i class="devicon-tailwindcss-original"></i>
+                  <i class="devicon-axios-plain-wordmark"></i>
+                  <i class="devicon-redux-original"></i>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="arrow" id="right-arrow-container"></div>
+      </div>
+    </div>
+
+    <div class="popup-image">
+      <span>&times;</span>
+      <img src="images/graduate.jpg" alt="" />
+    </div>
+
+    <button id="scrollToTop">▲</button>
+
     <script
       src="https://kit.fontawesome.com/7d83f24941.js"
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
     <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/dixonandmoe/rellax@master/rellax.min.js"></script>
     <script src="js/typeit.js"></script>
+    <script src="js/scroll-projects.js"></script>
+    <script src="js/scrollout-timeline.js"></script>
+    <script src="js/readme/os-process-simulator.js"></script>
+    <script src="js/readme/bcsd-mobile.js"></script>
+    <script src="js/readme/bcsd-game.js"></script>
+    <script src="js/readme/powerbi-award.js"></script>
+    <script src="js/readme/germany-exchange.js"></script>
+    <script src="js/readme/eip-certification.js"></script>
+    <script src="js/readme/anythink.js"></script>
+    <script src="js/readme/hana-field.js"></script>
+    <script src="js/readme/koreatechour.js"></script>
+    <script src="js/readme/playball.js"></script>
+    <script src="js/readme/road-analysis.js"></script>
+    <script src="js/readme/insta-generator.js"></script>
+    <script src="js/readme/web-fullstack.js"></script>
+    <script src="js/readme/naver-boostcamp.js"></script>
+    <script src="js/readme/smartday.js"></script>
+    <script src="js/readme/mygoodprice.js"></script>
+    <script src="js/readme.js"></script>
     <script src="js/main-ind.js"></script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/aos.js"></script>
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/scroll-totop.js"></script>
   </body>
 </html>

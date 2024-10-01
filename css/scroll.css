@@ -7,6 +7,15 @@
   opacity: 1;
 }
 
+.projects {
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+.projects.visible {
+  opacity: 1;
+}
+
 header {
   opacity: 0;
   transition: opacity 1s;

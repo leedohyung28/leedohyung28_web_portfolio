@@ -15,6 +15,16 @@ eipCertification.innerHTML = `
 <hr style="border: 1px solid white; width: 100%;">
 <details>
 <summary>확인증</summary>
-<div class="text-center"><img class="w-45" src="./images/readme/eip.jpg"></div>
+<div class="text-center click-img"><img class="w-45" src="./images/readme/eip.jpg"></div>
 </details>
 `;
+
+const imgElement = document.createElement("img");
+imgElement.classList.add("w-45");
+imgElement.src = "./images/readme/eip.jpg";
+imgElement.onclick = () => {
+  console.log("Clicked Baby");
+  document.querySelector(".popup-image").style.display = "block";
+  document.querySelector(".popup-image img").src =
+    imgElement.getAttribute("src");
+};

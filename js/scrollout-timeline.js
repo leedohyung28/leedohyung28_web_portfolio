@@ -7,11 +7,5 @@ ScrollOut({
 window.addEventListener("load", function () {
   setTimeout(function () {
     document.querySelector(".timeline").classList.add("visible");
-  }, 2650);
-});
-
-window.addEventListener("load", function () {
-  setTimeout(function () {
-    document.querySelector("header").classList.add("visible");
-  }, 2650);
+  }, 500);
 });

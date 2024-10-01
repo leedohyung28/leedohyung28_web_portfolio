@@ -535,6 +535,7 @@ mark,
 .img-fluid {
   width: 100%;
   height: auto;
+  filter: brightness(0.55);
 }
 
 .img-thumbnail {

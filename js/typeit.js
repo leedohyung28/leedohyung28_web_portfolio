@@ -19,10 +19,3 @@ new TypeIt("#korean-index-main", {
   .type("<h5 style='display:inline; font-weight:bold;'>형</h5>", { delay: 400 })
   .type(" 입니다.")
   .go();
-
-document.addEventListener("DOMContentLoaded", function () {
-  setTimeout(function () {
-    const formRow = document.querySelector(".form-row");
-    formRow.classList.add("transition-left");
-  }, 12000);
-});

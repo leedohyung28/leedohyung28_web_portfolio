@@ -43,6 +43,12 @@ a:hover {
   color: #ab6d46 !important;
 }
 
+.text-right-year {
+  display: inline;
+  color: #ab6d46;
+  font-weight: bold;
+}
+
 .bg-black {
   background: #000 !important;
 }
@@ -74,7 +80,7 @@ a:hover {
   top: 0;
   right: 0;
   width: 50%;
-  height: 1000%;
+  height: 700px;
   background-color: #f7f4eb;
   z-index: -5;
 }
@@ -139,6 +145,11 @@ a:hover {
 
 .site-section {
   padding: 2.5em 0;
+}
+
+.projects {
+  margin-top: 600px;
+  background-color: #c2ae8b;
 }
 
 @media (min-width: 768px) {
@@ -1656,19 +1667,19 @@ h6 {
 
 /* content-style */
 .content-study {
-  background-color: #5858fa !important;
+  background-color: rgba(88, 88, 250, 0.5) !important;
 }
 
 .content-project {
-  background-color: #088a85 !important;
+  background-color: rgba(8, 138, 133, 0.5) !important;
 }
 
 .content-extracurri {
-  background-color: #fe2e64 !important;
+  background-color: rgba(254, 46, 100, 0.5) !important;
 }
 
 .content-award {
-  background-color: #b40431 !important;
+  background-color: rgba(180, 4, 49, 0.5) !important;
 }
 
 /* timeline-style */
@@ -1759,7 +1770,6 @@ h6 {
 
 /* readme */
 .readme-container {
-  top: 100px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -1795,10 +1805,6 @@ h6 {
 
 .readme-border details {
   align-content: center;
-}
-
-.readme-border a {
-  color: #343a40;
 }
 
 .readme-border a:hover {
@@ -1930,13 +1936,12 @@ h6 {
   font-weight: bold;
 }
 
-.title {
+.header .title {
   font-size: 1.5em !important;
   font-weight: bold;
-  color: #f2e1a7;
 }
 
-.title:hover {
+.header .title:hover {
   color: #b5b5b5 !important;
 }
 
@@ -1950,6 +1955,17 @@ h6 {
 
 .main-icon:hover {
   color: #b5b5b5 !important;
+}
+
+.icon-word {
+  color: #f2e1a7;
+  display: flex;
+  place-items: center;
+}
+
+.icon-tit {
+  font-weight: bold;
+  color: #fff;
 }
 
 .image-container {
@@ -1982,4 +1998,106 @@ h6 {
 
 .image-flip .back {
   transform: rotateY(180deg);
+}
+
+body::-webkit-scrollbar {
+  width: 16px;
+  height: 16px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-track {
+  background: hsla(0, 0%, 82%, 0.5);
+}
+
+.txt-role,
+.txt-tech {
+  display: none;
+  padding: 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.txt-role {
+  background-color: rgba(84, 86, 85, 0.8);
+}
+
+.txt-tech {
+  background-color: rgba(218, 140, 166, 0.6);
+}
+
+.image-wrap-2:hover .txt-role,
+.image-wrap-2:hover .txt-tech {
+  display: block;
+}
+
+.image-wrap-2:hover .hover-hide-text {
+  display: none;
+}
+
+.bg-img {
+  background-image: url("../images/space.jpg");
+}
+
+.readme-container img:hover {
+  transform: scale(1.05);
+}
+
+.popup-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  display: none;
+}
+
+.popup-image span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  font-size: 60px;
+  font-weight: bolder;
+  color: #fff;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.popup-image img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+  border-radius: 5px;
+  height: 80%;
+  object-fit: cover;
+}
+
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  display: none;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.header-bg {
+  background-color: #dfd3c3;
+}
+
+.changed-title {
+  color: #273303 !important;
 }

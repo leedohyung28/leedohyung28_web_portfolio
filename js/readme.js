@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (index in rightReadmeContainers) {
           readmeContainer.appendChild(rightReadmeContainers[index]);
+          addImageClickEvent();
         }
         readmeContainer.classList.add("balloon");
 
@@ -72,6 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (index in leftReadmeContainers) {
           readmeContainer.appendChild(leftReadmeContainers[index]);
+          addImageClickEvent();
         }
 
         readmeContainer.classList.add("balloon");
@@ -94,6 +96,10 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+document.querySelector(".popup-image span").onclick = () => {
+  document.querySelector(".popup-image").style.display = "none";
+};
 
 let maxiArray = Array(16).fill(false);
 let arrowArray = Array(16).fill(false);
@@ -133,6 +139,16 @@ const containerTops = {
   17: "2800px",
   18: "2800px",
 };
+
+function addImageClickEvent() {
+  document.querySelectorAll(".readme-container img").forEach((image) => {
+    image.onclick = () => {
+      document.querySelector(".popup-image").style.display = "block";
+      document.querySelector(".popup-image img").src =
+        image.getAttribute("src");
+    };
+  });
+}
 
 function initializeCloseButton(readmeContainer, index) {
   const btnClose = readmeContainer.querySelector(".btn-close");

@@ -18,11 +18,5 @@ document.addEventListener("DOMContentLoaded", function () {
 window.addEventListener("load", function () {
   setTimeout(function () {
     document.querySelector(".scroll-container").classList.add("visible");
-  }, 2000);
-});
-
-window.addEventListener("load", function () {
-  setTimeout(function () {
-    document.querySelector("header").classList.add("visible");
-  }, 2000);
+  }, 500);
 });
