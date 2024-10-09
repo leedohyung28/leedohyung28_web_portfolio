@@ -1682,6 +1682,14 @@ h6 {
   background-color: rgba(180, 4, 49, 0.5) !important;
 }
 
+.content-nonimportant {
+  background-color: rgba(56, 52, 52, 0.5) !important;
+}
+
+.content-important {
+  background-color: rgba(9, 112, 109, 0.5) !important;
+}
+
 /* timeline-style */
 .timeline {
   min-height: 100vh;
@@ -2077,7 +2085,8 @@ body::-webkit-scrollbar-track {
   transform: translate(-50%, -50%);
   border: 5px solid #fff;
   border-radius: 5px;
-  height: 80%;
+  max-width: 80%;
+  max-height: 80%;
   object-fit: cover;
 }
 
@@ -2100,4 +2109,35 @@ body::-webkit-scrollbar-track {
 
 .changed-title {
   color: #273303 !important;
+}
+
+.projects-btn-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.projects-btn {
+  background: #ab6d46;
+  display: block;
+  position: relative;
+  float: left;
+  width: 150px;
+  padding: 0;
+  margin: 10px 20px 10px 0;
+  font-weight: 600;
+  text-align: center;
+  line-height: 50px;
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.2s;
+  box-shadow: 0px 5px 0px 0px #ab6d46;
+}
+
+.projects-btn:hover,
+.projects-btn.active {
+  box-shadow: 0px 0px 0px 0px #ab6d46;
+  background: #330000;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }

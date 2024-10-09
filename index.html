@@ -193,9 +193,55 @@
       <div class="projects">
         <h1 class="text-center text-white mb-5 pt-5">Projects</h1>
         <div class="container-fluid">
+          <div class="projects-btn-container">
+            <div class="row">
+              <button
+                class="projects-btn active"
+                style="width: 200px"
+                onclick="showProjects()"
+              >
+                ALL
+              </button>
+            </div>
+            <div class="row">
+              <button class="projects-btn" onclick="showProjects('react')">
+                React
+              </button>
+              <button class="projects-btn" onclick="showProjects('python')">
+                Python
+              </button>
+              <button class="projects-btn" onclick="showProjects('html')">
+                HTML
+              </button>
+              <button class="projects-btn" onclick="showProjects('dart')">
+                Dart
+              </button>
+              <button class="projects-btn" onclick="showProjects('csharp')">
+                C#
+              </button>
+            </div>
+            <div class="row" style="margin-bottom: 15px">
+              <button class="projects-btn" onclick="showProjects('nestjs')">
+                NestJS
+              </button>
+              <button class="projects-btn" onclick="showProjects('node')">
+                Node.js
+              </button>
+              <button class="projects-btn" onclick="showProjects('mariadb')">
+                MariaDB
+              </button>
+              <button class="projects-btn" onclick="showProjects('mongodb')">
+                MongoDB
+              </button>
+              <button class="projects-btn" onclick="showProjects('firebase')">
+                Firebase
+              </button>
+            </div>
+          </div>
+
           <div class="scroll-container">
             <div class="scroll-content">
-              <div class="col-lg-4">
+              <div class="col-lg-4" data-techs="react nestjs mongodb firebase">
                 <div class="image-wrap-2">
                   <div class="image-info">
                     <h5 class="mb-3 text-white">My Good Price</h5>
@@ -256,7 +302,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-4">
+              <div class="col-lg-4" data-techs="react node mariadb">
                 <div class="image-wrap-2">
                   <div class="image-info">
                     <h5 class="mb-3 text-white">SMART DAY</h5>
@@ -307,7 +353,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-4">
+              <div class="col-lg-4" data-techs="html node">
                 <div class="image-wrap-2">
                   <div class="image-info">
                     <h5 class="mb-3 text-white">Instagram Name Generator</h5>
@@ -357,7 +403,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-4">
+              <div class="col-lg-4" data-techs="python dart firebase">
                 <div class="image-wrap-2">
                   <div class="image-info">
                     <h5 class="mb-3 text-white">
@@ -415,7 +461,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-4">
+              <div class="col-lg-4" data-techs="dart">
                 <div class="image-wrap-2">
                   <div class="image-info">
                     <h2 class="mb-3">PLAYBALL</h2>
@@ -462,7 +508,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-4">
+              <div class="col-lg-4" data-techs="csharp mariadb">
                 <div class="image-wrap-2">
                   <div class="image-info">
                     <h3 class="mb-3 text-white">KOREATECHOUR</h3>
@@ -513,7 +559,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-4">
+              <div class="col-lg-4" data-techs="html mariadb">
                 <div class="image-wrap-2">
                   <div class="image-info">
                     <h2 class="mb-3">I ❤ Movies</h2>
@@ -543,7 +589,7 @@
                 </div>
               </div>
 
-              <div class="col-lg-4">
+              <div class="col-lg-4" data-techs="python">
                 <div class="image-wrap-2">
                   <div class="image-info">
                     <h4 class="mb-3 text-white">Scheduler Simulator</h4>
@@ -647,7 +693,7 @@
           <section class="timeline">
             <div class="timeline-containers">
               <div class="timeline-box">
-                <div class="timeline-content">
+                <div class="timeline-content no-big">
                   <p>1999.02.02</p>
                   <div class="h7 bolder">울산광역시 출생</div>
                   <div class="h7 mb-2 bold">Born in Ulsan, S.Korea</div>
@@ -655,7 +701,7 @@
               </div>
 
               <div class="timeline-box">
-                <div class="timeline-content">
+                <div class="timeline-content no-big">
                   <p>2014.03 ~ 2017.02</p>
                   <div class="h7 bolder">울산제일고등학교 졸업</div>
                   <div class="h7 mb-2 bold">
@@ -665,7 +711,7 @@
               </div>
 
               <div class="timeline-box">
-                <div class="timeline-content">
+                <div class="timeline-content no-big">
                   <p>2018.03</p>
                   <div class="h7 bolder">
                     한국기술교육대학교 컴퓨터공학부 입학
@@ -680,7 +726,7 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-year timeline-right">2022</div>
                 <div
-                  class="timeline-content w-45 position-absolute content-project"
+                  class="timeline-content w-45 position-absolute content-nonimportant"
                 >
                   <p>2022.03 ~ 2022.05</p>
                   <div class="h7 bolder">운영체제 시뮬레이터 팀 프로젝트</div>
@@ -688,12 +734,15 @@
                     OS Process Simulator Team Project
                   </div>
                   <i class="devicon-python-plain"></i>
+                  <h6 style="font-weight: bold; color: aquamarine">
+                    4인 프로젝트, 백엔드 알고리즘 개발
+                  </h6>
                 </div>
               </div>
 
               <div class="timeline-box pr-0 w-45">
                 <div
-                  class="timeline-content content-study"
+                  class="timeline-content content-nonimportant"
                   style="height: 300px"
                 >
                   <p>2022.03 ~ 2022.08</p>
@@ -703,12 +752,15 @@
                   <div class="h7 mb-2 bold">BCSD Mobile Study</div>
                   <i class="devicon-kotlin-plain"></i>
                   <i class="devicon-androidstudio-plain"></i>
+                  <h6 style="font-weight: bold; color: aquamarine">
+                    Kotlin, Android Studio 스터디
+                  </h6>
                 </div>
               </div>
 
               <div class="timeline-box">
                 <div
-                  class="timeline-content w-45 position-absolute content-extracurri"
+                  class="timeline-content w-45 position-absolute content-nonimportant"
                   style="height: 390px"
                 >
                   <p>2022.09 ~ 2023.02</p>
@@ -720,16 +772,22 @@
                   <i class="devicon-python-plain"></i>
                   <i class="devicon-cplusplus-plain"></i>
                   <i class="devicon-eclipse-plain"></i>
+                  <h6 style="font-weight: bold; color: aquamarine">
+                    QA/QC 전공 학습, 독일어 학습
+                  </h6>
                 </div>
               </div>
 
               <div class="timeline-box pr-0 w-45">
-                <div class="timeline-content mt-5 content-award">
+                <div class="timeline-content mt-5 content-nonimportant">
                   <p>2022.11.21</p>
                   <div class="h7 bolder">MS Power BI 해커톤 2위</div>
                   <div class="h7 mb-2 bold">
                     MS Power BI Hackathon - 2.Platz
                   </div>
+                  <h6 style="font-weight: bold; color: aquamarine">
+                    비즈니스 모델 IT 활용 시각화 발표 대회
+                  </h6>
                 </div>
               </div>
 
@@ -743,19 +801,22 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-year timeline-left">2023</div>
                 <div
-                  class="timeline-content w-45 position-absolute content-study mt-3"
+                  class="timeline-content w-45 position-absolute content-nonimportant mt-3"
                 >
                   <p>2023.03 ~ 2023.07</p>
                   <div class="h7 bolder">BCSD 학습동아리 게임 부분 스터디</div>
                   <div class="h7 mb-2 bold">BCSD Game Study</div>
                   <i class="devicon-csharp-plain-wordmark"></i>
                   <i class="devicon-unity-plain"></i>
+                  <h6 style="font-weight: bold; color: aquamarine">
+                    C#, Unity 스터디
+                  </h6>
                 </div>
               </div>
 
               <div class="timeline-box">
                 <div
-                  class="timeline-content w-45 position-absolute content-extracurri"
+                  class="timeline-content w-45 position-absolute content-important"
                   style="height: 600px"
                 >
                   <p>2023.04 ~ 2023.12</p>
@@ -768,11 +829,14 @@
                   <i class="devicon-firebase-plain"></i>
                   <i class="devicon-notion-plain"></i>
                   <i class="devicon-github-original"></i>
+                  <h6 style="font-weight: bold; color: aquamarine">
+                    Dart 헬스케어 앱 개발 (UI/UX 개발, 생성형 AI 이식)
+                  </h6>
                 </div>
               </div>
 
               <div class="timeline-box pr-0 w-45" style="margin-top: 9.5rem">
-                <div class="timeline-content content-award">
+                <div class="timeline-content content-nonimportant">
                   <p>2023.06.09</p>
                   <div class="h7 bolder">정보처리기사 취득</div>
                   <div class="h7 mb-2 bold">
@@ -784,7 +848,7 @@
               <div class="timeline-box"></div>
 
               <div class="timeline-box pr-0 w-45">
-                <div class="timeline-content content-extracurri">
+                <div class="timeline-content content-nonimportant">
                   <p>2023.07.03 ~ 07.28</p>
                   <div class="h7 bolder">(주)하나비전테크 현장실습</div>
                   <div class="h7 mb-2 bold">
@@ -793,12 +857,15 @@
                   <i class="devicon-python-plain"></i>
                   <i class="devicon-pytorch-original"></i>
                   <i class="devicon-opencv-plain"></i>
+                  <h6 style="font-weight: bold; color: aquamarine">
+                    AI 데이터 수집, 딥러닝 모델 학습
+                  </h6>
                 </div>
               </div>
 
               <div class="timeline-box">
                 <div
-                  class="timeline-content w-45 position-absolute content-project"
+                  class="timeline-content w-45 position-absolute content-nonimportant"
                   style="margin-top: 7rem; height: 650px"
                 >
                   <p>2023.11 ~ 2024.05</p>
@@ -816,29 +883,38 @@
                   <i class="devicon-firebase-plain"></i>
                   <i class="devicon-ubuntu-plain-wordmark"></i>
                   <i class="devicon-amazonwebservices-plain-wordmark"></i>
+                  <h6 style="font-weight: bold; color: aquamarine">
+                    4인 프로젝트, AI 개발
+                  </h6>
                 </div>
               </div>
 
               <div class="timeline-box pr-0 w-45">
-                <div class="timeline-content content-project">
+                <div class="timeline-content content-nonimportant">
                   <p>2023.10 ~ 2023.12</p>
                   <div class="h7 bolder">KOREATECHOUR 팀 프로젝트</div>
                   <div class="h7 mb-2 bold">KOREATECHOUR Team Project</div>
                   <i class="devicon-csharp-plain"></i>
                   <i class="devicon-mysql-plain-wordmark"></i>
                   <i class="devicon-nuget-original"></i>
+                  <h6 style="font-weight: bold; color: aquamarine">
+                    4인 프로젝트, 조장/FE
+                  </h6>
                 </div>
               </div>
 
               <div class="timeline-box"></div>
 
               <div class="timeline-box pr-0 w-45">
-                <div class="timeline-content content-project">
+                <div class="timeline-content content-nonimportant">
                   <p>2023.12</p>
                   <div class="h7 bolder">PLAYBALL 학기 프로젝트</div>
                   <div class="h7 mb-2 bold">PLAYBALL Term Project</div>
                   <i class="devicon-dart-plain"></i>
                   <i class="devicon-flutter-plain"></i>
+                  <h6 style="font-weight: bold; color: aquamarine">
+                    개인 프로젝트, 웹 애플리케이션
+                  </h6>
                 </div>
               </div>
 
@@ -852,7 +928,7 @@
               <div class="timeline-box"></div>
 
               <div class="timeline-box pr-0 w-45">
-                <div class="timeline-content content-project">
+                <div class="timeline-content content-important">
                   <p>2024.01 ~ 2024.02</p>
                   <div class="h7 bolder">인스타그램 이름 생성기 홈페이지</div>
                   <div class="h7 mb-2 bold">Instagram Name Generator</div>
@@ -862,6 +938,9 @@
                   <i class="devicon-nodejs-plain-wordmark"></i>
                   <i class="devicon-nodemon-plain"></i>
                   <i class="devicon-netlify-plain"></i>
+                  <h6 style="font-weight: bold; color: aquamarine">
+                    개인 프로젝트, 웹 사이트
+                  </h6>
                 </div>
               </div>
 
@@ -869,7 +948,7 @@
 
               <div class="timeline-box pr-0 w-45">
                 <div
-                  class="timeline-content position-absolute content-study w-100"
+                  class="timeline-content position-absolute content-important w-100"
                   style="height: 600px"
                 >
                   <p>2024.04 ~ 2024.10</p>
@@ -883,13 +962,16 @@
                   <i class="devicon-typescript-plain"></i>
                   <i class="devicon-docker-plain-wordmark"></i>
                   <i class="devicon-azuresqldatabase-plain"></i>
+                  <h6 style="font-weight: bold; color: aquamarine">
+                    웹 풀 스택 (FE, BE) 학습 및 프로젝트 수행
+                  </h6>
                 </div>
               </div>
 
               <div class="timeline-box" style="height: 100px">
                 <div
-                  class="timeline-content w-45 position-absolute content-study"
-                  style="height: 160px"
+                  class="timeline-content w-45 position-absolute content-nonimportant"
+                  style="height: 175px"
                 >
                   <p>2024.06 ~ 2024.07</p>
                   <div class="h7 bolder">네이버부스트캠프 모바일 베이직</div>
@@ -897,6 +979,9 @@
                   <i class="devicon-kotlin-plain"></i>
                   <i class="devicon-intellij-plain"></i>
                   <i class="devicon-gradle-original"></i>
+                  <h6 style="font-weight: bold; color: aquamarine">
+                    Kotlin 학습, 피어리뷰
+                  </h6>
                 </div>
               </div>
 
@@ -904,8 +989,8 @@
 
               <div class="timeline-box" style="height: 100px">
                 <div
-                  class="timeline-content w-45 position-absolute content-project"
-                  style="height: 160px"
+                  class="timeline-content w-45 position-absolute content-important"
+                  style="height: 175px"
                 >
                   <p>2024.06 ~ 2024.07</p>
                   <div class="h7 bolder">SMART DAY 팀 프로젝트</div>
@@ -919,6 +1004,9 @@
                   <i class="devicon-mysql-plain-wordmark"></i>
                   <i class="devicon-axios-plain-wordmark"></i>
                   <i class="devicon-redux-original"></i>
+                  <h6 style="font-weight: bold; color: aquamarine">
+                    6인 프로젝트, 프론트엔드 개발
+                  </h6>
                 </div>
               </div>
 
@@ -926,8 +1014,8 @@
 
               <div class="timeline-box" style="height: 200px">
                 <div
-                  class="timeline-content w-45 position-absolute content-project"
-                  style="height: 160px"
+                  class="timeline-content w-45 position-absolute content-important"
+                  style="height: 175px"
                 >
                   <p>2024.08</p>
                   <div class="h7 bolder">MyGoodPrice 팀 프로젝트</div>
@@ -941,6 +1029,9 @@
                   <i class="devicon-tailwindcss-original"></i>
                   <i class="devicon-axios-plain-wordmark"></i>
                   <i class="devicon-redux-original"></i>
+                  <h6 style="font-weight: bold; color: aquamarine">
+                    4인 프로젝트, 백엔드 개발
+                  </h6>
                 </div>
               </div>
             </div>
@@ -989,6 +1080,7 @@
     <script src="js/jquery-migrate-3.0.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
     <script src="js/scroll-totop.js"></script>
   </body>
 </html>

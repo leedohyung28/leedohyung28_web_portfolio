@@ -46,11 +46,11 @@ homeBtn.addEventListener("click", () => {
 const projectBtn = document.getElementById("projects");
 projectBtn.addEventListener("click", () => {
   console.log("projects Clicked");
-  window.scrollTo({ top: 620, behavior: "smooth" });
+  window.scrollTo({ top: 740, behavior: "smooth" });
 });
 
 const timelineBtn = document.getElementById("timeline");
 timelineBtn.addEventListener("click", () => {
   console.log("timeline Clicked");
-  window.scrollTo({ top: 1400, behavior: "smooth" });
+  window.scrollTo({ top: 1800, behavior: "smooth" });
 });
